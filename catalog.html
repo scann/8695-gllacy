@@ -44,6 +44,21 @@
             <a href="#">Новая регистрация</a>
           </form>
           <a class="cart" href="#">2 товара</a>
+          <form name="cart-form" method="post" action="#">
+            <div class="cart-item">
+              <span class="cart-item-name">Пломбир с апельсиновым джемом</span>
+              <span class="cart-item-quantity">1,5 кг х 200 руб.</span>
+              <span class="cart-item-price">300 руб.</span>
+            </div>
+            <div class="cart-item">
+              <span class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
+              <span class="cart-item-quantity">1,5 кг х 300 руб.</span>
+              <span class="cart-item-price">450 руб.</span>
+            </div>
+            <span class="cart-total">Итого: </span>
+            <span class="cart-sum">750 руб.</span>
+            <button type="submit">Оформить заказ</button>
+          </form>
         </div>
         <section class="header-contacts">
           С 10 до 20, ежедневно<br>
@@ -64,6 +79,9 @@
         <label for="field-sort">Сортировка:</label>
         <select id="field-sort">
           <option>по популярности</option>
+          <option>сначала недорогие</option>
+          <option>сначала дорогие</option>
+          <option>по жирности</option>
         </select>
         <label for="field-range">Цена: 100 руб. – 500 руб.</label>
         <input type="range" min="100" max="500" id="field-range">
@@ -85,61 +103,73 @@
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-апельсиновое мороженое">
           <p class="good-price">310<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-кофейное мороженое">
           <p class="good-price">380<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочно-кофейное с кусочками шоколада</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-клубничное мороженое">
           <p class="good-price">355<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочное крем-брюле">
           <p class="good-price">415<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочное крем-брюле с карамельной подливкой</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочное с брусничным джемом мороженое">
           <p class="good-price">325<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочное с брусничным джемом</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-черничное мороженое">
           <p class="good-price">410<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочно-черничное с цельными ягодами черники </p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-лимонное мороженое">
           <p class="good-price">375<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочно-лимонное с карамельной присыпкой</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочное с шоколадной стружкой мороженое">
           <p class="good-price">320<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочное с шоколадной стружкой</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-ванильное мороженое">
           <p class="good-price">440<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочно-ванильное с кусочками шоколада</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочноe с ментоловым сиропом мороженое">
           <p class="good-price">435<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочноe с ментоловым сиропом</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочное с кусочками черного шоколада мороженое">
           <p class="good-price">355<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочное с кусочками черного шоколада</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
         <div class="good-item">
           <img class="good-img" src="http://placehold.it/270x270" width="270" height="270" alt="Сливочное с мятным сиропом мороженое">
           <p class="good-price">420<span class="rub"></span>/кг</p>
           <p class="good-desription">Сливочное с мятным сиропом</p>
+          <a class="btn btn-fast-view" href="#">Быстрый просмотр</a>
         </div>
       </section>
       <div class="pagination">
