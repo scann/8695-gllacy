@@ -5,15 +5,16 @@ body {
 	font-weight: normal;
 	line-height: 1.375em;
 }
-h1 {
+h1, h2 {
 	color: #ffffff;
+}
+h1 {
 	font-family: "Roboto", sans-serif;
 	font-size: 60px;
 	font-weight: normal;
 	line-height: 1em;
 }
 h2, h3 {
-	color: #ffffff;
 	font-family: "Roboto", sans-serif;
 	font-size: 24px;
 	font-weight: normal;
