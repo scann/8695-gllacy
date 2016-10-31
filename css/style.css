@@ -62,6 +62,13 @@ h3 {
 .user-block {
   padding-top: 10px;
 }
+.slider-controls {
+  float: left;
+  width: 80px;
+}
+.btn-get {
+  margin-left: -80px;
+}
 .slider {
   text-align: center;
   margin-bottom: 30px;
@@ -113,8 +120,8 @@ h3 {
 }
 .contacts {
   outline: 1px solid black;
-  width: 300px;
   float: right;
+  width: 300px;
   margin-bottom: 60px;
 }
 .main-footer {
