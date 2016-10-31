@@ -7,12 +7,11 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container clearfix">
         <div class="index-logo">
           <a href="index.html">
             <img src="img/logo.svg" width="155" height="65" alt="Глэйси">
-        </div>
-          </a>
+          </a>  
         </div>
         <nav class="main-navigation">
           <ul class="main-navigation-ul">
@@ -28,20 +27,20 @@
           </ul>
         </nav>
         <div class="user-block">
-          <a class="btn btn-search" href="#">
-          <form name="search-form" method="post" action="#">
+          <a class="btn btn-search" href="#"></a>
+          <form class="search-form" name="search-form" method="post" action="#">
            <input type="search" name="site-search" placeholder="Что ищем?">
           </form>
           <a class="btn btn-login" href="#">Вход</a>
-          <form name="login" method="post" action="#">
+          <form class="login-form" name="login" method="post" action="#">
             <input type="email" name="login-email" placeholder="Электронная почта">
             <input type="password" name="login-password" placeholder="Пароль">
             <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
             <a href="#">Забыли пароль?</a>
             <a href="#">Новая регистрация</a>
           </form>
-          <a class="cart" href="#">2 товара</a>
-          <form name="cart-form" method="post" action="#">
+          <a class="btn btn-cart-full" href="#">2 товара</a>
+          <form class="cart-form" name="cart-form" method="post" action="#">
             <div class="cart-item">
               <img src="img/cart-icecream-orange.png" width="35" height="35" alt="Мороженое с апельсиновым джемом">
               <span class="cart-item-name">Пломбир с апельсиновым джемом</span>
@@ -59,21 +58,23 @@
             <button class="btn-main btn-buy" type="submit">Оформить заказ</button>
           </form>
         </div>
-        <section class="header-contacts">
-          С 10 до 20, ежедневно<br>
-          <span class="header-contacts-phone">8 812 450-25-25</span>
-        </section>
       </div>
     </header>
-    <main role="main">
-      <div class="container">
-        <div class="breadcrumbs">
+    <div class="container clearfix">
+      <div class="breadcrumbs">
           <ul class="breadcrumbs-ul">
             <li><a class="breadcrumbs-a" href="#">Главная</a></li>
             <li><a class="breadcrumbs-a" href="#">Каталог</a></li>
             <li><span class="breadcrumbs-active">Сливочное</span></li>
           </ul>
         </div>
+      <section class="header-contacts">
+        С 10 до 20, ежедневно<br>
+        <span class="header-contacts-phone">8 812 450-25-25</span>
+      </section>
+    </div>
+    <main role="main">
+      <div class="container clearfix">
         <h1 class="item-title">Сливочное мороженое</h1>
         <form class="filters" name="filters">
           <label class="filter-header" for="field-sort">Сортировка:</label>
@@ -182,12 +183,12 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="container">
+      <div class="container clearfix">
         <section class="footer-social">
-          <a class="social-btn social-btn-tw" href="#"></a>
-          <a class="social-btn social-btn-inst" href="#"></a>
-          <a class="social-btn social-btn-fb" href="#"></a>
-          <a class="social-btn social-btn-vk" href="#"></a>
+          <a class="social-btn social-btn-tw" href="#">T</a>
+          <a class="social-btn social-btn-inst" href="#">I</a>
+          <a class="social-btn social-btn-fb" href="#">F</a>
+          <a class="social-btn social-btn-vk" href="#">V</a>
         </section>
         <section class="footer-info">
           <ul class="footer-info-ul">

@@ -5,6 +5,8 @@ body {
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.375em;
+  margin: 0;
+  padding: 0;
 }
 h1, h2 {
 	color: #ffffff;
@@ -27,10 +29,11 @@ h3 {
 .main-navigation-submenu,
 .search-form,
 .login-form,
-.feedback-form {
+.feedback-form,
+.cart-form {
   display: none;
 }
-.clearfix {
+.clearfix:after {
   content: "";
   display: table;
   clear: both;
@@ -41,10 +44,10 @@ h3 {
   margin: 0 auto;
   outline: 1px solid black;
 }
-
 .index-logo {
   width: 170px;
   float: left;
+  padding-top: 10px;
 }
 .main-navigation {
   width: 684px;
@@ -52,9 +55,12 @@ h3 {
 }
 .user-block,
 .header-contacts {
-  width: 268px;
+  width: 290px;
   float: right;
   text-align: right;
+}
+.user-block {
+  padding-top: 10px;
 }
 .slider {
   text-align: center;
@@ -109,11 +115,10 @@ h3 {
   outline: 1px solid black;
   width: 300px;
   float: right;
+  margin-bottom: 60px;
 }
 .main-footer {
-  margin-top: 65px;
-  padding-top: 35px;
-  padding-bottom: 30px;
+  outline: 1px solid black;
 }
 .footer-social {
   float: left;
@@ -128,4 +133,36 @@ h3 {
 .footer-copyright {
   float: right;
   width: 267px;
+  padding-top: 15px;
+}
+.breadcrumbs {
+  float: left;
+  width: 290px;
+}
+.goods {
+  font-size: 0;
+}
+.good-item {
+  display: inline-block;
+  width: 267px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  vertical-align: top;
+  text-align: center;
+  font-size: 14px;
+}
+.good-item:nth-child(4n) {
+  margin-right: 0;
+}
+.good-price {
+  text-align: left;
+}
+.good-description {
+  text-align: center;
+}
+.pagination {
+  outline: 1px solid black;
+  float: right;
+  width: 190px;
+  margin-bottom: 30px;
 }
