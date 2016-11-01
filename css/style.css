@@ -24,12 +24,14 @@ h2, h3 {
 h2 {
   font-size: 35px;
   line-height: 1.17em;
+  margin: 0;
 }
 h3 {
   font-size: 24px;
   line-height: 1.2em;
 	color: #323232;
 }
+
 .main-navigation-submenu,
 .search-form,
 .login-form,
@@ -54,20 +56,32 @@ h3 {
 .index-logo {
   width: 170px;
   float: left;
+  margin-right: 27px;
   padding-top: 10px;
 }
 .main-navigation {
-  width: 684px;
+  width: 678px;
   float: left;
 }
-.user-block,
+.user-block {
+  float: right;
+  width: 267px;
+  padding-top: 22px;
+  text-align: right;
+}
 .header-contacts {
   width: 290px;
   float: right;
+  margin-bottom: 10px;
   text-align: right;
 }
-.user-block {
-  padding-top: 10px;
+.slider {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.slider h1 {
+  padding-top: 265px;
+  padding-bottom: 36px;
 }
 .slider-controls {
   float: left;
@@ -75,10 +89,6 @@ h3 {
 }
 .btn-get {
   margin-left: -80px;
-}
-.slider {
-  text-align: center;
-  margin-bottom: 30px;
 }
 .banners {
   margin-bottom: 40px;
@@ -91,6 +101,10 @@ h3 {
 }
 .banner:nth-child(2n+1) {
   margin-right: 25px;
+}
+.btn-buy {
+  display: block;
+  text-align: right;
 }
 .hits {
   margin-bottom: 40px;
@@ -112,12 +126,12 @@ h3 {
 }
 .advertise {
   outline: 1px solid black;
-  padding: 40px 25px;
+  padding: 25px 20px;
   margin-bottom: 40px;
 }
 .advertise-content {
   float: left;
-  width: 535px;
+  width: 540px;
 }
 .advertise-content:nth-child(2n) {
    margin-right: 25px;
@@ -128,11 +142,40 @@ h3 {
   width: 300px;
   margin-bottom: 60px;
 }
+.banner-blog p,
+.banner-blog h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.banner-blog {
+  padding-top: 25px;
+  padding-bottom: 87px;
+}
+.banner-blog p {
+  padding-bottom: 12px;
+}
+.banner-mail {
+  width: 510px;
+  padding-top: 30px;
+  padding-bottom: 34px;
+  border: 5px solid red;
+}
+.banner-mail p {
+  margin-top: 0;
+  margin-bottom: 38px;
+}
+.contacts {
+  width: 240px;
+  padding: 30px;
+  
+}
 .main-footer {
   outline: 1px solid black;
 }
 .footer-content {
   float: left;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 .footer-content:not(:nth-child(3n)){
   margin-right: 25px;
