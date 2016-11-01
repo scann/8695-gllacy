@@ -192,6 +192,13 @@ h3 {
 .breadcrumbs {
   float: left;
   width: 290px;
+  margin-bottom: 5px;
+}
+.item-title {
+  margin-bottom: 25px;
+}
+.filters {
+  margin-bottom: 35px;
 }
 .goods {
   font-size: 0;
