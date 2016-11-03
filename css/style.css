@@ -59,7 +59,7 @@ h3 {
   padding-top: 10px;
 }
 .main-navigation {
-  width: 678px;
+  width: 658px;
   float: left;
   margin-top: 10px;
 }
@@ -99,6 +99,9 @@ h3 {
   color: #333333;
   border-radius: 20px;
 }
+.main-navigation-li:active>a {
+    box-shadow: inset 0 2px 1px #696969;
+}
 .main-navigation-submenu {
   position: absolute;
   top: 52px;
@@ -130,7 +133,10 @@ h3 {
 .main-navigation-submenu-li a:active {
   background-color: #f6b5a5;
 }
-.submenu-first-item:hover > a,
+.submenu-first-item:hover > a {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
 .submenu-last-item:hover > a {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -148,15 +154,51 @@ h3 {
   height: 1px;
   background-color: #d1d0ce;
 }
-
 .main-navigation-li:hover .main-navigation-submenu {
     display: block;
 }
 .user-block {
   float: right;
-  width: 267px;
+  width: 287px;
   padding-top: 22px;
   text-align: right;
+}
+.btn {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-user-menu {
+  vertical-align: top;
+  font-size: 14px;
+  border-radius: 20px;
+}
+.btn-user-menu:hover {
+  color: #323232;
+}
+.btn-search {
+  padding: 16px;
+  background: url("../img/search-btn.png") 8px 8px no-repeat rgba(255, 255, 255, 0.2);
+  border-radius: 30px;  
+}
+.btn-search:hover {
+  background: url("../img/search-btn-active.png") 8px 8px no-repeat #f8f7f4;
+}
+.btn-login {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 6px 15px 6px 45px;
+  background: url("../img/enter-btn.png") 15px 7px no-repeat rgba(255, 255, 255, 0.2);
+}
+.btn-login:hover {
+  background: url("../img/enter-btn-active.png") 15px 7px no-repeat #f8f7f4;
+}
+.btn-cart-empty {
+  padding: 6px 35px 6px 45px;
+  background: url("../img/cart-btn.png") 17px 7px no-repeat rgba(255, 255, 255, 0.2);
+}
+.btn-cart-empty:hover {
+  background: url("../img/cart-btn-active.png") 17px 7px no-repeat #f8f7f4;
 }
 .header-contacts {
   width: 290px;
