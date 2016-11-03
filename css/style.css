@@ -31,7 +31,6 @@ h3 {
   line-height: 1.2em;
 	color: #323232;
 }
-
 .main-navigation-submenu,
 .search-form,
 .login-form,
@@ -56,12 +55,102 @@ h3 {
 .index-logo {
   width: 170px;
   float: left;
-  margin-right: 27px;
+  margin-left: -5px;
   padding-top: 10px;
 }
 .main-navigation {
   width: 678px;
   float: left;
+  margin-top: 10px;
+}
+.main-navigation-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+.main-navigation-li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -2px;
+  padding-bottom: 5px;
+  line-height: 20px;
+  font-size: 16px;
+}
+.main-navigation-li-a {
+  display: block; 
+  padding: 20px 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.main-navigation-li-a span {
+   border-bottom: 1px solid #adbdb4;
+}
+.main-navigation-li:hover span {
+  border-bottom: none;
+}
+.main-navigation-li:hover > a {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background-color: #fff;
+  border-radius: 16px;
+  color: #333333;
+  border-radius: 20px;
+}
+.main-navigation-submenu {
+  position: absolute;
+  top: 52px;
+  left: -6px;
+  width: 144px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0,0,0,.4);
+}
+.main-navigation-submenu-li {
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
+  font-size: 14px;
+}
+.main-navigation-submenu-li a {
+  display: block;
+  margin: 0;
+  padding: 10px 20px;
+  color: #343434;
+  text-decoration: none;
+}
+.main-navigation-submenu-li a:hover {
+  background-color: #fbded8;
+}
+.main-navigation-submenu-li a:active {
+  background-color: #f6b5a5;
+}
+.submenu-first-item:hover > a,
+.submenu-last-item:hover > a {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.submenu-first-item {
+  position: relative;
+  font-weight: 700;
+}
+.submenu-first-item:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background-color: #d1d0ce;
+}
+
+.main-navigation-li:hover .main-navigation-submenu {
+    display: block;
 }
 .user-block {
   float: right;
