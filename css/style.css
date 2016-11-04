@@ -89,7 +89,7 @@ h3 {
 .main-navigation {
   width: 658px;
   float: left;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .main-navigation-ul {
   margin: 0;
@@ -264,10 +264,18 @@ h3 {
   background-position: -94px -64px;
 }
 .header-contacts {
+  position: relative;
   width: 290px;
   float: right;
   margin-bottom: 10px;
   text-align: right;
+  font-size: 14px;
+  font-family: "Roboto Bold", Arial, sans-serif;
+  color: #ffffff;
+}
+.header-contacts-phone {
+  line-height: 1.55em;
+  font-size: 22px;
 }
 .slider {
   text-align: center;
