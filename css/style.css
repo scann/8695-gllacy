@@ -29,14 +29,14 @@
     font-style: normal;
 }
 body {
-  background-color: #849d8f;
-	color: #323232;
+  margin: 0;
+  padding: 0;
 	font-family: "Roboto Regular", Arial, sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.375em;
-  margin: 0;
-  padding: 0;
+  background-color: #849d8f;
+  color: #323232;
 }
 h1, h2 {
 	color: #ffffff;
@@ -79,6 +79,10 @@ h3 {
   padding-left: 27px;
   padding-right: 27px;
   outline: 1px solid black;
+}
+.main-header {
+  position: relative;
+  z-index: 10
 }
 .index-logo {
   width: 170px;
@@ -264,10 +268,9 @@ h3 {
   background-position: -94px -64px;
 }
 .header-contacts {
-  position: relative;
+  position: absolute;
   width: 290px;
-  float: right;
-  margin-bottom: 10px;
+  right: 27px;
   text-align: right;
   font-size: 14px;
   font-family: "Roboto Bold", Arial, sans-serif;
@@ -305,9 +308,19 @@ label[for="slider-radio-btn2"]:hover,
 label[for="slider-radio-btn3"]:hover {
   background: rgba(255, 255, 255, 0.4);
 }
-.slider h1 {
-  padding-top: 265px;
-  padding-bottom: 36px;
+main .container:first-child {
+  position: relative;
+}
+main .container:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  top: -40px
+}
+.slider-outer {
+  background: url("../img/icecream-slider1.png") 50% 50% no-repeat;
+}
+.slider-outer h1 {
+  padding: 350px 230px 0 230px;
 }
 .slider-controls {
   position: relative;
@@ -342,7 +355,6 @@ label[for="slider-radio-btn3"]:hover {
   line-height: 1.375em;
   font-family: "Roboto Bold", Arial, sans-serif;
   font-size: 32px;
-
 }
 .banners {
   margin-bottom: 40px;
@@ -351,51 +363,133 @@ label[for="slider-radio-btn3"]:hover {
   float: left;
   width: 520px;
   padding: 16px 20px;
+  border-radius: 12px;
   outline: 1px solid black;
 }
 .banner:nth-child(2n+1) {
   margin-right: 25px;
 }
+.banner-content {
+  margin-bottom: 45px;
+  padding-left: 1px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.banner-raspberry {
+  background: url("../img/raspberry-bg1.png");
+}
+.banner-chokolate {
+  background: url("../img/chokolate-bg1.png");
+}
 .btn-buy {
   display: block;
-  text-align: right;
+  float: right;
+  padding: 13px 22px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 26px;
 }
 .hits {
   margin-bottom: 40px;
   font-size: 0;
 }
+.hit-item::before {
+  content: "";
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background: url("../img/spritesheet.png");
+  background-position: -186px -5px;
+}
 .hit-item {
+  position: relative;
+  z-index: 2;
   display: inline-block;
   width: 267px;
-  margin-bottom: 25px;
   vertical-align: top;
   text-align: center;
   font-size: 16px;
+  color: #ffffff;
 }
 .hit-item:not(:nth-child(4n)) {
   margin-right: 25px;
 }
+.hit-item:nth-child(3) .hit-description {
+  padding-left: 2px;
+}
 .hit-price {
+  position: absolute;
+  z-index: 10;
+  top: 212px;
+  line-height: 1em;
   text-align: left;
+  font-family: "Roboto Bold", Arial, sans-serif;
+  font-size: 45px;
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+.weight {
+  font-size: 30px;
+}
+.hit-description {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 .advertise {
   outline: 1px solid black;
   padding: 25px 20px;
   margin-bottom: 40px;
+  background: url("../img/waffle-bg.jpg");
+  border-radius: 12px;
+  color: #323232;
+}
+.advertise-title {
+  line-height: 1.25em;
+  font-size: 24px;
+  font-family: "Roboto Medium", Arial, sans-serif;
+  color: #323232;
 }
 .advertise-content {
   float: left;
   width: 540px;
+  font-family: "Roboto Regular", Arial, sans-serif;
 }
 .advertise-content:nth-child(2n) {
    margin-right: 25px;
 }
-.contacts {
-  outline: 1px solid black;
-  float: right;
-  width: 300px;
-  margin-bottom: 60px;
+.advertise-block::before {
+  position: absolute;
+  top: -10px;
+  left: -55px;
+  width: 49px;
+  height: 49px;
+  content: "";
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
 }
+.advertise-block {
+  position: relative;
+  left: 55px;
+  top: -9px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  padding-right: 60px;
+}
+.adv-block1::before {
+  background-position: -64px -5px;
+}
+.adv-block2::before {
+  background-position: -123px -5px;
+}
+.adv-block3::before {
+  background-position: -5px -5px;
+}
+.adv-block4::before {
+  background-position: -5px -64px;
+}
+
 .banner-blog p,
 .banner-blog h3 {
   margin-top: 0;
@@ -403,23 +497,83 @@ label[for="slider-radio-btn3"]:hover {
 }
 .banner-blog {
   padding-top: 25px;
-  padding-bottom: 87px;
+  padding-bottom: 81px;
+  background: url("../img/blog-bg1.png") 13% 40% no-repeat;
+}
+.banner-blog h3 {
+  margin-right: 200px;
+}
+.banner-blog a {
+  color: #323232;
 }
 .banner-blog p {
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 .banner-mail {
+  position: relative;
   width: 510px;
   padding-top: 30px;
-  padding-bottom: 34px;
-  border: 5px solid red;
+  padding-bottom: 30px;
+  background: #f8f7f4;
+  border-radius: 10px;
+  border: 5px solid transparent;
+  /* border-image: repeating-linear-gradient(
+  -45deg,
+    #fe9e90,
+    #fe9e90 10px,
+    #ffffff 10px,
+    #ffffff 20px,
+    #92cdff 20px,
+    #92cdff 30px,
+    #ffffff 30px,
+    #ffffff 40px) 5; */
+  color: #5a5a5a;
+}
+.banner-mail::after {
+    position: absolute;
+    top: -5px; bottom: -5px;
+    left: -5px; right: -5px;
+    background-image: repeating-linear-gradient(-45deg,
+    #fe9e90,
+    #fe9e90 10px,
+    #ffffff 10px,
+    #ffffff 20px,
+    #92cdff 20px,
+    #92cdff 30px,
+    #ffffff 30px,
+    #ffffff 40px);
+    content: '';
+    z-index: -1;
+    border-radius: 10px;
 }
 .banner-mail p {
   margin-top: 0;
-  margin-bottom: 38px;
+  margin-bottom: 34px;
+}
+.mail-form input[type="email"] {
+  box-sizing: border-box;
+  width: 368px;
+  margin-right: 8px;
+  padding: 12px 15px;
+  line-height: 1.5em;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
+  font-family: "Roboto Regular", Arial, sans-serif;
+  color: #999999;
+}
+.btn-mail-subscribe {
+  width: 130px;
+  padding: 12px 20px 14px;
+  font-family: "Roboto Bold", Arial, sans-serif;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
 }
 .contacts {
+  outline: 1px solid black;
+  float: right;
   width: 240px;
+  margin-bottom: 60px;
   padding: 30px;
 
 }
