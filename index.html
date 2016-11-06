@@ -86,22 +86,22 @@
           <div class="hit-item">
             <img class="hit-img" src="img/icecream-cream-orange.png" width="270" height="270" alt="Сливочно-апельсиновое мороженое">
             <div class="hit-price">310₽<span class="weight">/кг</span></div>
-            <p class="hit-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a></p>
           </div>
           <div class="hit-item">
             <img class="hit-img" src="img/icecream-chokolate.png" width="270" height="270" alt="Сливочно-кофейное мороженое">
             <div class="hit-price">380₽<span class="weight">/кг</span></div>
-            <p class="hit-description">Сливочно-кофейное с кусочками шоколада</p>
+            <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a></p>
           </div>
           <div class="hit-item">
             <img class="hit-img" src="img/icecream-cream-strawberry.png" width="270" height="270" alt="Сливочно-клубничное мороженое">
             <div class="hit-price">355₽<span class="weight">/кг</span></div>
-            <p class="hit-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+            <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></a></p>
           </div>
           <div class="hit-item">
             <img class="hit-img" src="img/icecream-cream-caramel.png" width="270" height="270" alt="Сливочное крем-брюле">
             <div class="hit-price">415₽<span class="weight">/кг</span></div>
-            <p class="hit-description">Сливочное крем-брюле с карамельной подливкой</p>
+            <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочное крем-брюле с карамельной подливкой</span></a></p>
           </div>
         </section>
         <section class="advertise clearfix">
@@ -123,24 +123,28 @@
           <div class="banner banner-mail">
             <p class="mail-content">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас   происходит.   Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
             <form class="mail-form" name="mail-form" method="post" action="#">
-              <input type="email" placeholder="Электронная почта">
+              <label class="email-label" for="email-field">Электронная почта</label>
+              <input id="email-field" type="email" placeholder="Электронная почта">
               <button class="btn-main btn-mail-subscribe" type="submit">Отправить</button>
             </form>
           </div>
         </section>
-        <section class="contacts">
-          <div class="map"></div>
-          Адрес главного офиса и<br>
-          офлайн магазина:<br>
-          ул. Большая Конюшенная 19/8,<br>
-          Санкт-Петербург<br>
-          Для заказов по телефону:<br>
-          8 812 450-25-25<br>
-          (с 10 до 20 ежедневно)<br>
-          <a class="btn-main btn-feedback" href="#">Форма обратной связи</a>
-        </section>
        </div>
     </main>
+    <div class="map">
+      <div class="container clearfix">
+      <section class="contacts">
+        <span class="contacts-lightfont">Адрес главного офиса и<br>
+        офлайн магазина:</span><br>
+        <span class="contacts-boldfont">ул. Большая Конюшенная<br>
+        19/8, Санкт-Петербург</span><br>
+        <span class="contacts-lightfont">Для заказов по телефону:</span><br>
+        <span class="contacts-boldfont">8 812 450-25-25</span><br>
+        <span class="contacts-lightfont">(с 10 до 20 ежедневно)</span><br>
+        <a class="btn-main btn-feedback" href="#">Форма обратной связи</a>
+      </section>
+      </div>
+    </div>
     <footer class="main-footer">
       <div class="container clearfix">
         <section class="footer-content footer-social">
@@ -152,9 +156,9 @@
         <section class="footer-content footer-info">
           <ul class="footer-info-ul">
             <li class="footer-info-li"><span class="footer-info-active">Для поставщиков</span></li>
-            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#">О производстве</a></li>
-            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#">Наши документы</a></li>
-            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#">Экологические стандарты</a></li>
+            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>О производстве</span></a></li>
+            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Наши документы</span></a></li>
+            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Экологические стандарты</span></a></li>
           </ul>
         </section>
         <section class="footer-content footer-copyright">
