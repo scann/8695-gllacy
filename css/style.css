@@ -32,7 +32,6 @@ h3 {
 }
 .main-navigation-submenu,
 .search-form,
-.login-form,
 .feedback-form,
 .cart-form {
   display: none;
@@ -114,6 +113,7 @@ h3 {
 }
 .main-navigation-submenu {
   position: absolute;
+  z-index: 20;
   top: 52px;
   left: -6px;
   width: 144px;
@@ -174,8 +174,8 @@ h3 {
   position: relative;
   float: right;
   width: 287px;
+  margin-right: -25px;
   padding-top: 22px;
-  text-align: right;
 }
 .btn {
   display: inline-block;
@@ -240,7 +240,7 @@ h3 {
   background-position: -63px -64px;
 }
 .btn-cart-empty {
-  padding: 6px 35px 6px 26px;
+  padding: 6px 35px 6px 45px;
 }
 .btn-user-menu:hover.btn-cart-empty::before {
   background-position: -94px -64px;
@@ -259,8 +259,8 @@ h3 {
 }
 .search-form {
   position: absolute;
-  top: 63px;
-  right: 227px;
+  top: 100%;
+  right: 88%;
   width: 308px;
   margin: 0;
   padding: 20px 16px;
@@ -268,6 +268,22 @@ h3 {
   background-color: #f8f7f4;
   box-shadow: 0 20px 20px rgba(0,0,0,.4);
 }
+.field-wrapper {
+ position: relative;
+ top: 0;
+ left: 0;
+}
+.moving-label {
+  position: absolute;
+  z-index: 10;
+  left: 5%;
+  top: 25%;
+  line-height: 1.71em;
+  font-size: 14px;
+  color: #999999;
+  transition: top 1s ease-out 0.5s;
+}
+.search-field ,
 .email-field,
 .password-field {
   box-sizing: border-box;
@@ -275,11 +291,20 @@ h3 {
   line-height: 1.71em;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
-  font-family: "Roboto Regular", Arial, sans-serif;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 16px;
 }
 .search-field {
+  position: relative;
+  z-index: 20;
   padding: 10px;
+  background: transparent;
+}
+.search-field:focus.moving-label {
+  top: 30%;
+  line-height: 1.18em;
+  font-size: 11px;
+  color: #5b9ddf;
 }
 .search-field:hover,
 .email-field:hover,
@@ -289,8 +314,8 @@ h3 {
 }
 .login-form {
   position: absolute;
-  top: 63px;
-  right: 122px;
+  top: 105%;
+  right: 52%;
   width: 237px;
   margin: 0;
   padding: 20px;
@@ -301,10 +326,14 @@ h3 {
 .login-form span {
   border-bottom: 1px solid #adacaa;
 }
+.login-form .moving-label {
+  left: 6%;
+  top: 15%;
+}
 .email-field,
 .password-field {
   margin-bottom: 20px;
-  padding: 12px;
+  padding: 7px;
 }
 .btn-enter,
 .login-a {

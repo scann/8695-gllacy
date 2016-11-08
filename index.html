@@ -36,11 +36,25 @@
         <div class="user-block">
           <a class="btn btn-user-menu btn-search" href="#"></a>
           <form class="search-form" name="search-form" method="post" action="#">
-            <label for="search-field-id">Что ищем?</label>
-            <input class="search-field" id="search-field-id" Чтоtype="search" name="site-search" placeholder="Что ищем?">
+            <div class="field-wrapper">
+              <label class="moving-label" for="search-field-id">Что ищем?</label>
+              <input class="search-field" id="search-field-id" type="search" name="site-search">
+            </div>  
           </form>
           <a class="btn btn-user-menu btn-login" href="#">Вход</a>
-          
+          <form class="login-form" name="login-form" method="post" action="#">
+            <div class="field-wrapper">
+              <label class="moving-label" for="email-field-id">Электронная почта</label>
+              <input class="email-field" id="email-field-id" type="email" name="login-email">
+            </div>
+            <div class="field-wrapper">  
+              <label class="moving-label" for="password-field-id">Пароль</label>
+              <input class="password-field" id="password-field-id" type="password" name="login-password">
+            </div>  
+            <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
+            <a class="login-a remind-password" href="#"><span>Забыли пароль?</span></a>
+            <a class="login-a new-reg" href="#"><span>Новая регистрация</span></a>
+          </form>
           <a class="btn btn-user-menu btn-cart-empty" href="#">Пусто</a>
          </div>
       </div>
@@ -119,7 +133,7 @@
             <p class="mail-content">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
             <form class="mail-form" name="mail-form" method="post" action="#">
               <label class="email-label" for="email-field">Электронная почта</label>
-              <input id="email-field" type="email" placeholder="Электронная почта">
+              <input id="email-field" type="email">
               <button class="btn-main btn-mail-subscribe" type="submit">Отправить</button>
             </form>
           </div>
@@ -164,9 +178,12 @@
     </footer>
     <form class="feedback-form" name="feedback-form" method="post" action="#">
       <h2>Мы обязательно вам ответим!</h2>
-      <input type="text" name="feedback-author" placeholder="Как Вас зовут?">
-      <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-      <textarea name="feedback-content">Напишите что-нибудь...</textarea>
+      <label for="author-field-id">Как Вас зовут?</label>
+      <input class="feedback-author-field" id="author-field-id" type="text" name="feedback-author">
+      <label for="email-field-id">Ваша почта для ответа?</label>
+      <input class="feedback-email-field" id="email-field-id" type="email" name="feedback-email">
+      <label for="feedback-comment-id">Напишите что-нибудь...</label>
+      <textarea class="feedback-comment" id="feedback-comment-id" name="feedback-content"></textarea>
       <button type="submit" name="feedback-submit">Отправить</button>
     </form>
   </body>
