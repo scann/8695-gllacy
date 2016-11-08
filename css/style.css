@@ -33,7 +33,6 @@ h3 {
 .main-navigation-submenu,
 .search-form,
 .login-form,
-.feedback-form,
 .cart-form {
   display: none;
 }
@@ -284,28 +283,54 @@ h3 {
   transition: all 0.5s;
 }
 .search-form .moving-label,
- .login-form .moving-label{
-  left: 5%;
+.login-form .moving-label,
+.feedback-form .moving-label {
+  left: 4%;
   top: 25%;
+}
+.feedback-form label[for="feedback-comment-id"] {
+  top: 6%;
+}
+.search-field,
+.email-field,
+.password-field,
+.feedback-author-field,
+.feedback-email-field,
+.feedback-comment {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  font-weight: 700;
+  font-size: 16px; 
 }
 .search-field ,
 .email-field,
 .password-field {
-  box-sizing: border-box;
-  width: 100%;
   line-height: 1.71em;
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
-  font-weight: 700;
-  font-size: 16px;
 }
-.search-field,
-.email-field,
-.password-field{
-  position: relative;
-  z-index: 5;
-  padding: 10px;
+.feedback-author-field,
+.feedback-email-field,
+.feedback-comment {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
+.feedback-author-field,
+.feedback-email-field {
+   width: 267px;
+}
+.feedback-comment {
+  width: 100%;
+  height: 155px;
+  resize: none;
+}
+.feedback-author-field:focus +.moving-label,
+.feedback-email-field:focus +.moving-label,
+.feedback-comment:focus +.moving-label,
 .search-field:focus + .moving-label,
 .email-field:focus + .moving-label,
 .password-field:focus + .moving-label{
@@ -313,16 +338,25 @@ h3 {
   font-size: 11px;
   color: #5b9ddf;
 }
-.search-field:focus + .moving-label {
-   top: -30%;
-}
 .search-field:focus + .moving-label,
-.email-field:focus + .moving-label {
+.feedback-author-field:focus + .moving-label,
+.feedback-email-field:focus + .moving-label {
+   top: -35%;
+}
+.email-field:focus + .moving-label,
+.password-field:focus + .moving-label,
+.feedback-comment:focus + .moving-label  {
   top: -25%;
 }
+.feedback-comment:focus + .moving-label {
+  top: -10%;
+} 
 .search-field:hover,
 .email-field:hover,
-.password-field:hover {
+.password-field:hover,
+.feedback-author-field:hover,
+.feedback-email-field:hover,
+.feedback-comment:hover {
   border: 1px solid #c7c6c5;
   box-shadow: inset 0 0 0 1px #c7c6c5;
 }
@@ -347,7 +381,6 @@ h3 {
 .email-field,
 .password-field {
   margin-bottom: 20px;
-  padding: 7px 15px;
 }
 .btn-enter,
 .login-a {
@@ -359,7 +392,7 @@ h3 {
   line-height: 1.33em;
   border-radius: 30px;
   border: none;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
   font-size: 18px;
 }
 .login-a { 
@@ -376,6 +409,69 @@ h3 {
 .login-a:hover span,
 .login-a:active span {
   border-bottom: 1px solid #f9cdc4;
+}
+.feedback-form {
+  position: absolute;
+  z-index: 25; 
+  top: 340px;
+  left: 50%;
+  width: 430px;
+  margin-left: -215px;
+  padding: 20px 25px;
+  border-radius: 8px;
+  background-color: #f8f7f4;
+}
+.feedback-form h2 {
+  margin-bottom: 20px;
+  line-height: 1.17em;
+  font-weight: 400;
+  font-size: 24px;
+  color: #323232;
+}
+.btn-feedback-submit {
+  display: block;
+  float: right;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+}
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -15px;
+  width: 20px;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 3px;
+}
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 .header-contacts {
   position: absolute;
@@ -448,6 +544,7 @@ main .container:nth-child(2) {
 .btn-main {
   display: inline-block;
   color: #ffffff;
+  font-weight: 700;
   text-decoration: none;
   text-shadow: 0 2px 5px 0 rgba(160,32,11, 0.76);
   box-shadow: 0 2px 2px 0 rgba(160,32,11, 0.76);
@@ -470,7 +567,7 @@ main .container:nth-child(2) {
   line-height: 44px;
   border-radius: 37px;
   line-height: 1.375em;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
   font-size: 32px;
 }
 .banners {
@@ -543,7 +640,7 @@ main .container:nth-child(2) {
   top: 212px;
   line-height: 1em;
   text-align: left;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
   font-size: 45px;
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
@@ -565,13 +662,13 @@ main .container:nth-child(2) {
 .advertise-title {
   line-height: 1.25em;
   font-size: 24px;
-  font-family: "Roboto Medium", Arial, sans-serif;
+  font-weight: 500;
   color: #323232;
 }
 .advertise-content {
   float: left;
   width: 540px;
-  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: 400;
 }
 .advertise-content:nth-child(2n) {
    margin-right: 25px;
@@ -667,7 +764,7 @@ main .container:nth-child(2) {
   line-height: 1.5em;
   border: 1px solid #d3d3d2;
   border-radius: 4px;
-  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: 400;
   color: #999999;
 }
 .email-label {
@@ -694,7 +791,7 @@ main .container:nth-child(2) {
 .btn-mail-subscribe {
   width: 130px;
   padding: 12px 20px 14px;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
   font-size: 18px;
   border-radius: 30px;
   border: none;
@@ -724,7 +821,7 @@ main .container:nth-child(2) {
 .contacts-lightfont {
   line-height: 1.42em;
   font-size: 14px;
-  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: 400;
 }
 .contacts-lightfont:first-child {
   margin-bottom: 5px;
@@ -738,7 +835,7 @@ main .container:nth-child(2) {
 .contacts-boldfont {
   line-height: 1.33em;
   font-size: 18px;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
 }
 .contacts-boldfont:first-child {
   margin-bottom: 20px;
@@ -752,7 +849,7 @@ main .container:nth-child(2) {
   padding: 12px 25px;
   border-radius: 20px;
   font-size: 18px;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
 }
 .main-footer {
   outline: 1px solid black;
@@ -842,15 +939,15 @@ main .container:nth-child(2) {
 }
 .hit-description-a,
 .footer-info-ul-li-a {
-  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: 700;
   color: #ffffff;
   text-decoration: none;
 }
 .footer-info-ul-li-a {
-  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: 700;
 }
 .hit-description-a {
-  font-family: "Roboto Medium", Arial, sans-serif;
+  font-weight: 500;
 }
 .hit-description-a span,
 .footer-info-ul-li-a span {
@@ -871,7 +968,7 @@ main .container:nth-child(2) {
 .footer-info-active {
   position: relative;
   margin-right: -4px;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
   border-bottom: 1px solid #9db1a5;
 }
 .footer-info-active::before {
@@ -897,7 +994,7 @@ main .container:nth-child(2) {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.5em;
-  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: 400;
   font-size: 12px;
   color: #ffffff;
 }

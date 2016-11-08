@@ -31,15 +31,21 @@
         <div class="user-block">
           <a class="btn btn-user-menu btn-search" href="#"></a>
           <form class="search-form" name="search-form" method="post" action="#">
-            <label for="search-field-id">Что ищем?</label>
-            <input class="search-field" id="search-field-id" type="search" name="site-search">
+            <div class="field-wrapper">
+              <input class="search-field" id="search-field-id" type="search" name="site-search">
+              <label class="moving-label" for="search-field-id">Что ищем?</label>
+            </div>  
           </form>
           <a class="btn btn-user-menu btn-login" href="#">Вход</a>
           <form class="login-form" name="login-form" method="post" action="#">
-            <label for="email-field-id">Электронная почта</label>
-            <input class="email-field" id="email-field-id" type="email" name="login-email">
-            <label for="password-field-id">Пароль</label>
-            <input class="password-field" id="password-field-id" type="password" name="login-password">
+            <div class="field-wrapper">
+              <input class="email-field" id="email-field-id" type="email" name="login-email">
+              <label class="moving-label" for="email-field-id">Электронная почта</label>
+            </div>
+            <div class="field-wrapper">  
+              <input class="password-field" id="password-field-id" type="password" name="login-password">
+              <label class="moving-label" for="password-field-id">Пароль</label>
+            </div>  
             <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
             <a class="login-a remind-password" href="#"><span>Забыли пароль?</span></a>
             <a class="login-a new-reg" href="#"><span>Новая регистрация</span></a>
