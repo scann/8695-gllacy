@@ -32,6 +32,7 @@ h3 {
 }
 .main-navigation-submenu,
 .search-form,
+.login-form,
 .feedback-form,
 .cart-form {
   display: none;
@@ -240,6 +241,7 @@ h3 {
   background-position: -63px -64px;
 }
 .btn-cart-empty {
+  margin-left: 4px;
   padding: 6px 35px 6px 45px;
 }
 .btn-user-menu:hover.btn-cart-empty::before {
@@ -276,12 +278,15 @@ h3 {
 .moving-label {
   position: absolute;
   z-index: 10;
-  left: 5%;
-  top: 25%;
   line-height: 1.71em;
   font-size: 14px;
   color: #999999;
-  transition: top 1s ease-out 0.5s;
+  transition: all 0.5s;
+}
+.search-form .moving-label,
+ .login-form .moving-label{
+  left: 5%;
+  top: 25%;
 }
 .search-field ,
 .email-field,
@@ -294,17 +299,26 @@ h3 {
   font-weight: 700;
   font-size: 16px;
 }
-.search-field {
+.search-field,
+.email-field,
+.password-field{
   position: relative;
-  z-index: 20;
+  z-index: 5;
   padding: 10px;
-  background: transparent;
 }
-.search-field:focus.moving-label {
-  top: 30%;
+.search-field:focus + .moving-label,
+.email-field:focus + .moving-label,
+.password-field:focus + .moving-label{
   line-height: 1.18em;
   font-size: 11px;
   color: #5b9ddf;
+}
+.search-field:focus + .moving-label {
+   top: -30%;
+}
+.search-field:focus + .moving-label,
+.email-field:focus + .moving-label {
+  top: -25%;
 }
 .search-field:hover,
 .email-field:hover,
@@ -333,7 +347,7 @@ h3 {
 .email-field,
 .password-field {
   margin-bottom: 20px;
-  padding: 7px;
+  padding: 7px 15px;
 }
 .btn-enter,
 .login-a {
@@ -366,12 +380,18 @@ h3 {
 .header-contacts {
   position: absolute;
   width: 290px;
-  top: -13px;
-  right: 24px;
+  top: -8px;
+  right: 2%;
   text-align: right;
   font-size: 14px;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: bold;
   color: #ffffff;
+}
+.header-contacts span {
+  display: block; 
+}
+.header-contacts-time {
+  line-height: 1.09em;
 }
 .header-contacts-phone {
   line-height: 1.55em;
@@ -667,10 +687,6 @@ main .container:nth-child(2) {
   border: 1px solid #8fbdec;
   box-shadow: 0px 0px 0px 1px #8fbdec inset;
 }
-#email-field:focus::-webkit-input-placeholder {color: transparent}
-#email-field:focus::-moz-placeholder          {color: transparent}
-#email-field:focus:-moz-placeholder           {color: transparent}
-#email-field:focus:-ms-input-placeholder      {color: transparent}
 
 #email-field:focus.email-label {
   display: block;
