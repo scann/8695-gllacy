@@ -29,19 +29,22 @@
           </ul>
         </nav>
         <div class="user-block">
-          <a class="btn btn-search" href="#"></a>
+          <a class="btn btn-user-menu btn-search" href="#"></a>
           <form class="search-form" name="search-form" method="post" action="#">
-           <input type="search" name="site-search" placeholder="Что ищем?">
+            <label for="search-field-id">Что ищем?</label>
+            <input class="search-field" id="search-field-id" type="search" name="site-search">
           </form>
-          <a class="btn btn-login" href="#">Вход</a>
-          <form class="login-form" name="login" method="post" action="#">
-            <input type="email" name="login-email" placeholder="Электронная почта">
-            <input type="password" name="login-password" placeholder="Пароль">
+          <a class="btn btn-user-menu btn-login" href="#">Вход</a>
+          <form class="login-form" name="login-form" method="post" action="#">
+            <label for="email-field-id">Электронная почта</label>
+            <input class="email-field" id="email-field-id" type="email" name="login-email">
+            <label for="password-field-id"></label>
+            <input class="password-field" id="password-field-id" type="password" name="login-password" placeholder="Пароль">
             <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Новая регистрация</a>
+            <a class="login-a remind-password" href="#"><span>Забыли пароль?</span></a>
+            <a class="login-a new-reg" href="#"><span>Новая регистрация</span></a>
           </form>
-          <a class="btn btn-cart-full" href="#">2 товара</a>
+          <a class="btn btn-user-menu btn-cart-full" href="#">2 товара</a>
           <form class="cart-form" name="cart-form" method="post" action="#">
             <div class="cart-item">
               <img src="img/cart-icecream-orange.png" width="35" height="35" alt="Мороженое с апельсиновым джемом">
