@@ -33,6 +33,7 @@ h3 {
 .main-navigation-submenu,
 .search-form,
 .login-form,
+.feedback-form,
 .cart-form {
   display: none;
 }
@@ -287,6 +288,8 @@ h3 {
 .feedback-form .moving-label {
   left: 4%;
   top: 25%;
+  line-height: 1.5em;
+  font-size: 16px;
 }
 .feedback-form label[for="feedback-comment-id"] {
   top: 6%;
@@ -316,7 +319,7 @@ h3 {
 .feedback-email-field,
 .feedback-comment {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   line-height: 1.5;
 }
 .feedback-author-field,
@@ -416,21 +419,22 @@ h3 {
   top: 340px;
   left: 50%;
   width: 430px;
-  margin-left: -215px;
-  padding: 20px 25px;
+  margin-left: -240px;
+  padding: 15px 25px;
   border-radius: 8px;
   background-color: #f8f7f4;
 }
 .feedback-form h2 {
   margin-bottom: 20px;
   line-height: 1.17em;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 24px;
   color: #323232;
 }
 .btn-feedback-submit {
   display: block;
   float: right;
+  margin-bottom: 13px;
   padding: 12px 25px;
   border: none;
   border-radius: 30px;
@@ -450,9 +454,9 @@ h3 {
 .modal-content-close::after {
   content: "";
   position: absolute;
-  top: 25px;
-  left: -15px;
-  width: 20px;
+  top: 20px;
+  left: -12px;
+  width: 22px;
   height: 3px;
   background-color: #000000;
   border-radius: 3px;
