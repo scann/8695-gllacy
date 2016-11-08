@@ -1,37 +1,8 @@
-@font-face {
-    font-family: 'Roboto Bold';
-    src: url('../fonts/Roboto-Bold.eot');
-    src: local('Roboto Bold'), local('Roboto Bold'),
-         url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Bold.woff') format('woff'),
-         url('../fonts/Roboto-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Roboto Medium';
-    src: url('../fonts/Roboto-Medium.eot');
-    src: local('Roboto Medium'), local('Roboto Medium'),
-         url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Medium.woff') format('woff'),
-         url('../fonts/Roboto-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Roboto Regular';
-    src: url('../fonts/Roboto-Regular.eot');
-    src: local('Roboto Regular'), local('Roboto Regular'),
-         url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Regular.woff') format('woff'),
-         url('../fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
 body {
   margin: 0;
   padding: 0;
-	font-family: "Roboto Regular", Arial, sans-serif;
+  min-width: 900px;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.375em;
@@ -42,12 +13,12 @@ h1, h2 {
 	color: #ffffff;
 }
 h1 {
-	font-family: "Roboto Bold", Arial, sans-serif;
 	font-size: 60px;
+  font-weight: 700;
 	line-height: 1em;
 }
 h2, h3 {
-	font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 700;
 }
 h2 {
   font-size: 35px;
@@ -108,8 +79,8 @@ h3 {
   margin-right: -2px;
   padding-bottom: 5px;
   line-height: 1.25em;
-   font-family: "Roboto Bold", Arial, sans-serif;
   font-size: 16px;
+  font-weight: 700;
 }
 .main-navigation-li-a {
   display: block;
@@ -117,22 +88,28 @@ h3 {
   color: #ffffff;
   text-decoration: none;
 }
-.main-navigation-li-a span {
+.main-navigation-li-a > span {
    border-bottom: 1px solid #adbdb4;
 }
 .main-navigation-li:hover span {
   border-bottom: none;
 }
+.main-navigation-inactive,
 .main-navigation-li:hover > a {
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 5px 15px;
-  background-color: #fff;
-  border-radius: 16px;
-  color: #333333;
-  border-radius: 20px;
+  border-radius: 20px; 
 }
-.main-navigation-li:active>a {
+.main-navigation-inactive {
+  margin-right: 2px;
+  background-color: #d07058;
+}
+.main-navigation-li:hover > a {
+  background-color: #fff;
+  color: #333333;
+}
+.main-navigation-li>a:active {
     box-shadow: inset 0 2px 1px #696969;
 }
 .main-navigation-submenu {
@@ -154,7 +131,7 @@ h3 {
   font-size: 14px;
 }
 .main-navigation-submenu-li:not(:first-child) {
-  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: 400;
 }
 .main-navigation-submenu-li a {
   display: block;
@@ -179,7 +156,7 @@ h3 {
 }
 .submenu-first-item {
   position: relative;
-  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: 900;
 }
 .submenu-first-item:after {
   content: "";
