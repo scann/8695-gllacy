@@ -578,6 +578,44 @@ h3 {
   line-height: 1.55em;
   font-size: 22px;
 }
+.breadcrumbs {
+  width: 290px;
+  margin-top: 40px;
+  padding-top: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+.breadcrumbs-li {
+  position: relative;
+  display: inline;
+  padding-right: 20px;
+  line-height: 1.14em;
+  font-size: 14px;
+  font-weight: 400;
+}
+.breadcrumbs-li > span {
+  color: #ffffff;
+}
+.breadcrumbs-a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.breadcrumbs-a span {
+  border-bottom: 1px solid #aebeb5;
+}
+.breadcrumbs-a:hover {
+  color: #ffbc9e;
+}
+.breadcrumbs-a:hover > span {
+  border-bottom: 1px solid #a7a294;
+}
+.breadcrumbs-li:not(:last-child)::after {
+  content: "»";
+  position: absolute;
+  top: 0;
+  left: 60px;
+  color: #ffffff;
+}  
 .slider-outer {
   text-align: center;
   margin-bottom: 40px;
@@ -1082,11 +1120,6 @@ main .container:nth-child(2) {
   font-weight: 400;
   font-size: 12px;
   color: #ffffff;
-}
-.breadcrumbs {
-  float: left;
-  width: 290px;
-  margin-bottom: 5px;
 }
 .item-title {
   margin-bottom: 25px;
