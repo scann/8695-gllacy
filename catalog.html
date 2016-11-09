@@ -52,26 +52,34 @@
           </form>
           <a class="btn btn-user-menu btn-cart-full" href="#">2 товара</a>
           <form class="cart-form" name="cart-form" method="post" action="#">
-            <div class="cart-item">
-              <img src="img/cart-icecream-orange.png" width="35" height="35" alt="Мороженое с апельсиновым джемом">
-              <span class="cart-item-name">Пломбир с апельсиновым джемом</span>
-              <span class="cart-item-quantity">1,5 кг х</span><span class="cart-item-price">200 руб.</span>
-              <span class="cart-item-price">300 руб.</span>
-            </div>
-            <div class="cart-item">
-            <img src="img/cart-icecream-strawberry.png" width="35" height="35" alt="Клубничный пломбир">
-              <span class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
-              <span class="cart-item-quantity">1,5 кг х</span><span class="cart-item-price">300 руб.</span>
-              <span class="cart-item-price">450 руб.</span>
-            </div>
-            <span class="cart-total">Итого: </span>
-            <span class="cart-sum">750 руб.</span>
-            <button class="btn-main btn-buy" type="submit">Оформить заказ</button>
+              <div class="cart-item">
+                <button class="modal-item-delete" type="button" title="Удалить">Удалить</button>
+                <img src="img/cart-icecream-orange.png" width="35" height="35" alt="Мороженое с апельсиновым  джемом">
+                <span class="cell cart-item-name">Пломбир с апельсиновым джемом</span>
+                <span class="cell cart-item-quantity">1,5 кг х <span class="cart-item-price">200 руб.</span></span>
+                <span class="cell cart-item-sum">300 руб.</span>
+              </div>
+              <div class="cart-item">
+                <button class="modal-item-delete" type="button" title="Удалить">Удалить</button>
+                <img src="img/cart-icecream-strawberry.png" width="35" height="35" alt="Клубничный пломбир">
+                <span class="cell cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
+                <span class="cell cart-item-quantity">1,5 кг х <span class="cart-item-price">300 руб.</span></span>
+                <span class="cell cart-item-sum">450 руб.</span>
+              </div>
+              <span class="cart-total">Итого: <span class="cart-sum">750 руб.</span></span>
+              <button class="btn-main btn-buy-cart" type="submit">Оформить заказ</button>
           </form>
         </div>
       </div>
     </header>
-    <div class="container clearfix">
+    <main role="main">
+      <div class="container clearfix">
+        <section class="header-contacts">
+         <span class="header-contacts-time">С 10 до 20, ежедневно</span>
+         <span class="header-contacts-phone">8 812 450-25-25</span>
+       </section>
+      </div>
+      <div class="container clearfix">
       <div class="breadcrumbs">
           <ul class="breadcrumbs-ul">
             <li><a class="breadcrumbs-a" href="#">Главная</a></li>
@@ -79,12 +87,7 @@
             <li><span class="breadcrumbs-active">Сливочное</span></li>
           </ul>
         </div>
-      <section class="header-contacts">
-        С 10 до 20, ежедневно<br>
-        <span class="header-contacts-phone">8 812 450-25-25</span>
-      </section>
-    </div>
-    <main role="main">
+      </div>
       <div class="container clearfix">
         <h1 class="item-title">Сливочное мороженое</h1>
         <form class="filters" name="filters">

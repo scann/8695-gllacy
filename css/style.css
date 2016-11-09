@@ -439,17 +439,26 @@ h3 {
   border: none;
   border-radius: 30px;
 }
-.modal-content-close {
+.modal-content-close,
+.modal-item-delete {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 22px;
-  height: 22px;
   font-size: 0;
   background-color: transparent;
   border: 0;
   cursor: pointer;
 }
+.modal-content-close {
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+}
+.modal-item-delete {
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+}  
 .modal-content-close::before,
 .modal-content-close::after {
   content: "";
@@ -458,14 +467,86 @@ h3 {
   left: -12px;
   width: 22px;
   height: 3px;
-  background-color: #000000;
+  background-color: #515050;
   border-radius: 3px;
 }
-.modal-content-close::before {
+.modal-item-delete::before,
+.modal-item-delete::after{
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 12px;
+  height: 1px;
+  background-color: #3e3e3e;
+  border-radius: 2px;
+}  
+.modal-content-close::before,
+.modal-item-delete::before {
   transform: rotate(45deg);
 }
-.modal-content-close::after {
+.modal-content-close::after,
+.modal-item-delete::after {
   transform: rotate(-45deg);
+}
+.cart-form {
+  position: absolute;
+  top: 104%;
+  right: 8%;
+  width: 510px;
+  padding: 20px 15px;
+  background-color: #f8f7f4;
+  border-radius: 6px;
+}
+.cart-item {
+  position: relative;
+  margin-bottom: 15px;
+  line-height: 1.23em;
+  font-size: 13px;
+  font-weight: 400;
+}
+.cart-item:last-of-type {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #cacac7;
+}
+.cart-item img {
+  padding-left: 25px;
+  padding-right: 10px;
+}
+.cell {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+}
+.cart-item-name {
+  width: 230px;
+}
+.cart-item-quantity {
+  padding-left: 12px;
+}
+.cart-item-sum {
+  padding-left: 27px;
+}
+.cart-item-price {
+  color: #999999;
+}
+.cart-total,
+.btn-buy-cart {
+  display: block;
+} 
+.cart-total { 
+  margin-bottom: 11px;
+  line-height: 1.2em;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+}
+.btn-buy-cart {
+  float: right;
+  margin-right: 3px;
+  padding: 15px 17px;
+  border: none;
+  border-radius: 20px;
 }
 .modal-overlay {
   display: none;
