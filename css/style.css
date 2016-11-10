@@ -800,11 +800,15 @@ main .container:nth-child(2) {
   color: #ffffff;
 }
 .good-item:hover {
+  margin-bottom: -65px;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+  z-index: 2;
+  border-radius: 5px;
 }
 .good-item:hover .btn-fast-view {
-  display: block;
+  display: inline-block;
 }
 .goods:nth-child(n+4) {
   margin-left: -12px;
@@ -848,12 +852,8 @@ main .container:nth-child(2) {
   margin-bottom: 0;
 }
 .btn-fast-view {
-  position: absolute;
-  z-index: 15;
-  top: 20px;
-  left: 48px;
   display: none;
-  margin: 0 auto;
+  margin-bottom: 22px;
   padding: 10px 17px;
   line-height: 1.33em;
   border-radius: 20px;
