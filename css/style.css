@@ -647,14 +647,14 @@ body > input[type="radio"] {
 .slider-outer {
   position: relative;
   margin-bottom: 40px;
-  padding-top: 270px;
+  padding-top: 350px;
   text-align: center;
   color: #ffffff;
 }
 .slide-title {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   font-weight: 700;
   font-size: 60px;
 }
@@ -679,7 +679,7 @@ body > input[type="radio"] {
 }
 .btn-slide {
   vertical-align: top;
-  padding: 15px 40px;
+  padding: 12px 40px;
   line-height: 44px;
   border-radius: 37px;
   line-height: 1.375em;
@@ -750,7 +750,7 @@ main .container:nth-child(2) {
   margin-right: 25px;
 }
 .banner-content {
-  margin-bottom: 45px;
+  margin-bottom: 43px;
   padding-left: 1px;
   font-size: 18px;
   color: #ffffff;
@@ -766,7 +766,8 @@ main .container:nth-child(2) {
 .btn-buy {
   display: block;
   float: right;
-  padding: 13px 22px;
+  padding: 10px 22px;
+  margin-bottom: 5px;
   font-size: 18px;
   text-align: center;
   border-radius: 26px;
