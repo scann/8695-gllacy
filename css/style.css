@@ -313,11 +313,20 @@ body > input[type="radio"] {
 }
 .search-form .moving-label,
 .login-form .moving-label,
+.feedback-form .moving-label,
+.mail-form .moving-label {
+  line-height: 1.5em;
+  font-size: 16px;
+}
+.search-form .moving-label,
+.login-form .moving-label,
 .feedback-form .moving-label {
   left: 4%;
   top: 25%;
-  line-height: 1.5em;
-  font-size: 16px;
+}
+.mail-form .moving-label {
+  left: 6%;
+  top: 68%;
 }
 .feedback-form label[for="feedback-comment-id"] {
   top: 6%;
@@ -364,7 +373,8 @@ body > input[type="radio"] {
 .feedback-comment:focus +.moving-label,
 .search-field:focus + .moving-label,
 .email-field:focus + .moving-label,
-.password-field:focus + .moving-label{
+.password-field:focus + .moving-label,
+.email-list-field:focus +.moving-label {
   line-height: 1.18em;
   font-size: 11px;
   color: #5b9ddf;
@@ -382,14 +392,29 @@ body > input[type="radio"] {
 .feedback-comment:focus + .moving-label {
   top: -10%;
 }
+.email-list-field:focus + .moving-label {
+  top: 50%;
+}
 .search-field:hover,
 .email-field:hover,
 .password-field:hover,
 .feedback-author-field:hover,
 .feedback-email-field:hover,
-.feedback-comment:hover {
+.feedback-comment:hover,
+.email-list-field:hover {
   border: 1px solid #c7c6c5;
   box-shadow: inset 0 0 0 1px #c7c6c5;
+}
+
+.search-field:focus,
+.email-field:focus,
+.password-field:focus,
+.feedback-author-field:focus,
+.feedback-email-field:focus,
+.feedback-comment:focus,
+.email-list-field:focus {
+  border: 1px solid #8fbdec;
+  box-shadow: inset 0px 0px 0px 1px #8fbdec;
 }
 .login-form {
   position: absolute;
@@ -799,6 +824,12 @@ main .container:nth-child(2) {
   font-size: 16px;
   color: #ffffff;
 }
+.hit-item:not(:nth-child(4n)) {
+  margin-right: 25px;
+}
+.hit-item:nth-child(3) .hit-description {
+  padding-left: 2px;
+}
 .good-item:hover {
   margin-bottom: -65px;
   border-radius: 6px;
@@ -910,30 +941,40 @@ main .container:nth-child(2) {
 .adv-block4::before {
   background-position: -5px -64px;
 }
-
 .banner-blog p,
 .banner-blog h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
 .banner-blog {
-  padding-top: 25px;
-  padding-bottom: 81px;
+  padding-top: 22px;
+  padding-bottom: 85px;
   background: url("../img/blog-bg.png") 13% 40% no-repeat;
 }
 .banner-blog h3 {
-  margin-right: 200px;
+  margin-right: 235px;
+  background: rgba(255, 255, 255, 0.8);
 }
-.banner-blog a {
+.banner-blog-a {
   color: #323232;
+  text-decoration: none;
 }
+.border-a{ 
+  border-bottom: 2px solid #353535;
+}
+.banner-blog-a:hover {
+  color: #e84d37;
+}
+.banner-blog-a:hover>.border-a {
+  border-bottom: 2px solid #f9cdc4;
+} 
 .banner-blog p {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 .banner-mail {
   position: relative;
   width: 510px;
-  padding-top: 30px;
+  padding-top: 26px;
   padding-bottom: 30px;
   background: #f8f7f4;
   background-clip: padding-box;
@@ -962,7 +1003,7 @@ main .container:nth-child(2) {
   margin-top: 0;
   margin-bottom: 34px;
 }
-#email-field {
+.email-list-field {
   box-sizing: border-box;
   position: relative;
   width: 368px;
@@ -974,27 +1015,8 @@ main .container:nth-child(2) {
   font-weight: 400;
   color: #999999;
 }
-.email-label {
-  display: none;
-  position: absolute;
-  top: 110px;
-  left: 35px;
-  line-height: 1.13em;
-  font-size: 11px;
-  color: #8fbdec;
-}
-#email-field:hover {
-  border: 1px solid #c7c6c5;
-  box-shadow: 0px 0px 0px 1px #c7c6c5 inset;
-}
-#email-field:focus {
-  border: 1px solid #8fbdec;
-  box-shadow: 0px 0px 0px 1px #8fbdec inset;
-}
 
-#email-field:focus.email-label {
-  display: block;
-}
+
 .btn-mail-subscribe {
   width: 130px;
   padding: 12px 20px 14px;
