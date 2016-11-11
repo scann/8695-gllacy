@@ -52,7 +52,7 @@ h3 {
 .content-wrapper {
  /*  width: 900px; */
   margin: 0 auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 body > input[type="radio"] {
   display: none;
@@ -873,7 +873,7 @@ main .container:nth-child(2) {
 .good-price {
   top: 180px;
   left: 5px;
-} 
+}
 .weight {
   font-size: 30px;
 }
@@ -959,7 +959,7 @@ main .container:nth-child(2) {
   color: #323232;
   text-decoration: none;
 }
-.border-a{ 
+.border-a{
   border-bottom: 2px solid #353535;
 }
 .banner-blog-a:hover {
@@ -967,7 +967,7 @@ main .container:nth-child(2) {
 }
 .banner-blog-a:hover>.border-a {
   border-bottom: 2px solid #f9cdc4;
-} 
+}
 .banner-blog p {
   padding-bottom: 4px;
 }
@@ -1015,8 +1015,6 @@ main .container:nth-child(2) {
   font-weight: 400;
   color: #999999;
 }
-
-
 .btn-mail-subscribe {
   width: 130px;
   padding: 12px 20px 14px;
@@ -1025,11 +1023,15 @@ main .container:nth-child(2) {
   border-radius: 30px;
   border: none;
 }
-.map {
-  height: 428px;
-}
-.map .container {
+.map-block {
   position: relative;
+  z-index: 1;
+  height: 430px;
+  background: url(../img/map.png);
+}
+.map-block .container {
+  position: relative;
+  z-index: 2;
 }
 .contacts {
   outline: 1px solid black;
@@ -1039,38 +1041,35 @@ main .container:nth-child(2) {
   float: right;
   width: 250px;
   margin-bottom: 60px;
-  padding: 25px;
+  padding: 29px 25px;
   background: #fdfefe;
   border-radius: 13px;
 }
-.contacts-lightfont,
-.contacts-boldfont {
+.lightfont,
+.boldfont {
   display: inline-block;
 }
-.contacts-lightfont {
+.lightfont {
   line-height: 1.42em;
   font-size: 14px;
   font-weight: 400;
 }
-.contacts-lightfont:first-child {
+.address{
   margin-bottom: 5px;
 }
-.contacts-lightfont:nth-child(2){
-  margin-bottom: 10px;
+.phone{
+  margin-bottom: 7px;
 }
-.contacts-lightfont:last-child{
-  margin-bottom: 30px;
+.time{
+  margin-bottom: 24px;
 }
-.contacts-boldfont {
+.boldfont {
   line-height: 1.33em;
   font-size: 18px;
   font-weight: 700;
 }
-.contacts-boldfont:first-child {
-  margin-bottom: 20px;
-}
-.contacts-boldfont:last-child {
-  margin-bottom: 5px;
+.street {
+  margin-bottom: 16px;
 }
 .btn-feedback {
   display: block;
