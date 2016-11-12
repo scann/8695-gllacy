@@ -239,6 +239,9 @@ body > input[type="radio"] {
   padding: 16px;
   border-radius: 30px;
 }
+.btn-search:hover + .search-form {
+  display: block;
+}
 .btn-user-menu:hover.btn-search::before {
   background-position: -228px -103px;
 }
@@ -260,6 +263,9 @@ body > input[type="radio"] {
 }
 .btn-user-menu:hover.btn-login::before {
   background-position: -94px -94px;
+}
+.btn-login:hover + .login-form {
+  display: block;
 }
 .btn-cart-empty::before {
   left: 25%;
@@ -288,6 +294,7 @@ body > input[type="radio"] {
 }
 .search-form {
   position: absolute;
+  z-index: 20;
   top: 100%;
   right: 88%;
   width: 308px;
@@ -442,7 +449,7 @@ body > input[type="radio"] {
   float: left;
 }
 .btn-enter {
-  margin-right: 16px;
+  margin-right: 13px;
   padding: 13px 25px;
   line-height: 1.33em;
   border-radius: 30px;
