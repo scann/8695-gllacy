@@ -34,7 +34,7 @@
             <div class="field-wrapper">
               <input class="search-field" id="search-field-id" type="search" name="site-search">
               <label class="moving-label" for="search-field-id">Что ищем?</label>
-            </div>  
+            </div>
           </form>
           <a class="btn btn-user-menu btn-login" href="#">Вход</a>
           <form class="login-form" name="login-form" method="post" action="#">
@@ -42,10 +42,10 @@
               <input class="email-field" id="email-field-id" type="email" name="login-email">
               <label class="moving-label" for="email-field-id">Электронная почта</label>
             </div>
-            <div class="field-wrapper">  
+            <div class="field-wrapper">
               <input class="password-field" id="password-field-id" type="password" name="login-password">
               <label class="moving-label" for="password-field-id">Пароль</label>
-            </div>  
+            </div>
             <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
             <a class="login-a remind-password" href="#"><span>Забыли пароль?</span></a>
             <a class="login-a new-reg" href="#"><span>Новая регистрация</span></a>
@@ -87,27 +87,45 @@
         </ul>
         <h1 class="item-title">Сливочное мороженое</h1>
         <form class="filters" name="filters">
-          <label class="filter-header" for="field-sort">Сортировка:</label>
-          <select id="field-sort">
-            <option>по популярности</option>
-            <option>сначала недорогие</option>
-            <option>сначала дорогие</option>
-            <option>по жирности</option>
-          </select>
-          <label class="filter-header" for="field-range">Цена: 100 руб. – 500 руб.</label>
-          <input id="field-range" type="range" min="100" max="500">
-          <div class="filter-header">Жирность:</div>
-          <input type="radio" id="item-fat-0" name="fat"><label for="item-fat-0">0%</label>
-          <input type="radio" id="item-fat-before10" name="fat"checked><label for="item-fat-before10">до  10%</label>
-          <input type="radio" id="item-fat-before30" name="fat"><label for="item-fat-before30">до 30%</label>
-          <input type="radio" id="item-fat-above30" name="fat"><label for="item-fat-above30">выше 30%</label>
-          <div class="filter-header">Наполнители:</div>
-          <input type="checkbox" id="item-chokolate" checked><label for="item-chokolate">шоколадные</label>
-          <input type="checkbox" id="item-sugar" checked><label for="item-sugar">сахарные присыпки</label>
-          <input type="checkbox" id="item-fruits"><label for="item-fruits">фрукты</label>
-          <input type="checkbox" id="item-syrops"><label for="item-syrops">сиропы</label>
-          <input type="checkbox" id="item-jams"><label for="item-jams">джемы</label>
-          <button class="btn-apply-filter" type="submit">Применить</button>
+          <div class="filters-wrapper">
+            <label class="filter-header" for="sort-field-id">Сортировка:</label>
+            <div class="select-wrapper">
+              <select class="sort-field" id="sort-field-id">
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            </div>
+          </div>
+          <div class="filters-wrapper">
+            <label class="filter-header" for="range-field-id">Цена: 100 руб. – 500 руб.</label>
+            <div class="range-field" id="range-field-id">
+              <div class="bar"></div>
+              <div class="range-toggle toggle-left"></div>
+              <div class="range-toggle toggle-right"></div>
+            </div>
+          </div>
+          <div class="filters-wrapper">
+            <div class="filter-header">Жирность:</div>
+            <div class="item-fat-wrapper">
+              <input class="item-fat" id="item-fat-0" type="radio" name="fat"><label class="label-fat" for="item-fat-0">0%</label>
+              <input class="item-fat" id="item-fat-before10" type="radio" name="fat" checked><label class="label-fat" for="item-fat-before10">до 10%</label>
+              <input class="item-fat" id="item-fat-before30" type="radio" name="fat"><label class="label-fat" for="item-fat-before30">до 30%</label>
+              <input class="item-fat" id="item-fat-above30" type="radio" name="fat"><label class="label-fat" for="item-fat-above30">выше 30%</label>
+            </div>
+          </div>
+          <div class="filters-wrapper">
+            <div class="filter-header">Наполнители:</div>
+            <div class="item-fill-wrapper">
+              <input class="item-fill" id="item-chokolate" type="checkbox" checked><label class="label-fill" for="item-chokolate">шоколадные</label>
+              <input class="item-fill" id="item-sugar" type="checkbox"checked><label class="label-fill" for="item-sugar">сахарные присыпки</label>
+              <input class="item-fill" id="item-fruits" type="checkbox"><label class="label-fill" for="item-fruits">фрукты</label>
+              <input class="item-fill" id="item-syrops" type="checkbox"><label class="label-fill" for="item-syrops">сиропы</label>
+              <input class="item-fill" id="item-jams" type="checkbox"><label class="label-fill" for="item-jams">джемы</label>
+            </div>
+          </div>
+            <button class="btn-apply-filter" type="submit">Применить</button>
         </form>
         <section class="goods">
           <div class="good-item">
@@ -193,26 +211,30 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="container clearfix">
-        <section class="footer-content footer-social">
-          <a class="social-btn social-btn-tw" href="#">Twitter</a>
-          <a class="social-btn social-btn-inst" href="#">Instagram</a>
-          <a class="social-btn social-btn-fb" href="#">Facebook</a>
-          <a class="social-btn social-btn-vk" href="#">VKontakte</a>
-        </section>
-        <section class="footer-content footer-info">
-          <ul class="footer-info-ul">
-            <li class="footer-info-li"><span class="footer-info-active">Для поставщиков</span></li>
-            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#">О производстве</a></li>
-            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#">Наши документы</a></li>
-            <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#">Экологические стандарты</a></li>
-          </ul>
-        </section>
-        <section class="footer-content footer-copyright">
-          <a class="footer-logo" href="https://htmlacademy.ru"><img src="img/footer-logo.png" width="110" height="40" alt="HTML Academy"></a>
-          <p>Сделано в HTML Academy © 2016</p>
-        </section>
-      </div>
-    </footer>
+          <div class="container clearfix">
+            <section class="footer-content footer-social">
+              <a class="social-btn social-btn-tw" href="#">Twitter</a>
+              <a class="social-btn social-btn-inst" href="#">Instagram</a>
+              <a class="social-btn social-btn-fb" href="#">Facebook</a>
+              <a class="social-btn social-btn-vk" href="#">VKontakte</a>
+            </section>
+            <section class="footer-content footer-info">
+              <div class="footer-info-wrapper">
+                <ul class="footer-info-ul ul-left-column">
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a footer-info-active" href="#"><span>Для   поставщиков</span></a></li>
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>О производстве</span></a></li>
+                </ul>
+                <ul class="footer-info-ul ul-right-column">
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Наши документы</span></a></li>
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Экологические стандарты</span></a></li>
+                </ul>
+              </div>
+            </section>
+            <section class="footer-content footer-copyright">
+              <a class="footer-logo" href="https://htmlacademy.ru"><img src="img/footer-logo.png" width="110" height="40" alt="HTMLAcademy"></a>
+              <p>Сделано в <a class="footer-copyright-a" href="#"><span>HTML Academy</span></a> © 2016</p>
+            </section>
+          </div>
+        </footer>
   </body>
 </html>
