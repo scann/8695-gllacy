@@ -202,21 +202,23 @@
       <h2>Мы обязательно вам ответим!</h2>
       <div class="field-wrapper">
         <input class="feedback-author-field" id="author-field-id" type="text" name="feedback-author">
-        <label class="moving-label" for="author-field-id">Как Вас зовут?</label>
+        <label class="moving-label author-label" for="author-field-id">Как Вас зовут?</label>
       </div>
       <div class="field-wrapper">
         <input class="feedback-email-field" id="feedback-email-field-id" type="email" name="feedback-email">
-        <label class="moving-label" for="feedback-email-field-id">Ваша почта для ответа?</label>
+        <label class="moving-label email-label" for="feedback-email-field-id">Ваша почта для ответа?</label>
       </div>
       <div class="field-wrapper">
-        <textarea class="feedback-comment" id="feedback-comment-id" name="feedback-content"></textarea>
-        <label class="moving-label" for="feedback-comment-id">Напишите что-нибудь...</label>
+        <textarea class="feedback-comment" id="feedback-comment-id" name="feedback-comment"></textarea>
+        <label class="moving-label comment-label" for="feedback-comment-id">Напишите что-нибудь...</label>
       </div>
+      <span class="feedback-warning">Введите имя и/или почту!</span>
       <button class="btn-main btn-feedback-submit" type="submit" name="feedback-submit">Отправить</button>
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
     </form>
     <div class="modal-overlay"></div>
   <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <script type="text/javascript" src="js/map.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/forms.js"></script>
   </body>
 </html>
