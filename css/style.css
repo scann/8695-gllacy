@@ -284,13 +284,15 @@ body > input[type="radio"] {
   left: 25%;
   width: 21px;
   height: 20px;
-  background-position: -63px -64px; /*rewrite by actual coords*/
+  background-position: -125px -64px;
 }
 .btn-cart-full {
   padding: 6px 16px 6px 45px;
+  background-color: #f8f7f4;
+  color: #323232;
 }
-.btn-user-menu:hover.btn-cart-full::before {
-  background-position: -125px -64px; /*rewrite by actual coords*/
+.btn-user-menu:hover + .cart-form {
+  display: block;
 }
 .search-form {
   position: absolute;
@@ -1046,7 +1048,6 @@ main .container:nth-child(2) {
   border-radius: 26px;
 }
 .hits {
-  margin-bottom: 36px;
   font-size: 0;
 }
 .goods {
@@ -1075,12 +1076,7 @@ main .container:nth-child(2) {
   font-size: 16px;
   color: #ffffff;
 }
-.hit-item:not(:nth-child(4n)) {
-  margin-right: 25px;
-}
-.hit-item:nth-child(3) .hit-description {
-  padding-left: 2px;
-}
+.hit-item:hover,
 .good-item:hover {
   margin-bottom: -65px;
   border-radius: 6px;
@@ -1089,27 +1085,37 @@ main .container:nth-child(2) {
   z-index: 2;
   border-radius: 5px;
 }
-.good-item:hover .btn-fast-view {
+.good-item:hover .btn-fast-view,
+.hit-item:hover .btn-fast-view {
   display: inline-block;
 }
 .goods:nth-child(n+4) {
   margin-left: -12px;
 }
+.hits:nth-child(n+4) {
+  margin-left: -9.5px;
+}
+.hit-item,
 .good-item {
   margin-bottom: 30px;
-  padding-right: 12px;
-  padding-left: 12px;
   padding-top: 6px;
 }
+.good-item {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.hit-item {
+  padding-right: 9px;
+  padding-left: 9px;
+}
+
+.hit-item:nth-child(4n),
 .good-item:nth-child(4n) {
   margin-right: -12px;
 }
 .hit-item:nth-child(3) .hit-description,
 .good-item:nth-child(3) .good-description {
   padding-left: 2px;
-}
-.good-description {
-  margin-top: 0;
 }
 .hit-price,
 .good-price {
@@ -1134,10 +1140,13 @@ main .container:nth-child(2) {
 }
 .hit-description,
 .good-description {
-  margin-top: 6px;
   margin-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px;
+}
+.good-description,
+.hit-description {
+  margin-top: 1px;
 }
 .btn-fast-view {
   display: none;
@@ -1150,7 +1159,7 @@ main .container:nth-child(2) {
 }
 .advertise {
   outline: 1px solid black;
-  padding: 20px;
+  padding: 24px 20px;
   margin-bottom: 40px;
   background: url("../img/waffle-bg.jpg");
   border-radius: 12px;
