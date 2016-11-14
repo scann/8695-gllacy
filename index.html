@@ -24,7 +24,7 @@
                   <a class="main-navigation-li-a" href="#"><span>Каталог</span></a>
                   <ul class="main-navigation-submenu">
                     <li class="main-navigation-submenu-li submenu-first-item"><a>Новинки</a></li>
-                    <li class="main-navigation-submenu-li"><a href="#">Сливочное</a></li>
+                    <li class="main-navigation-submenu-li"><a href="catalog.html">Сливочное</a></li>
                     <li class="main-navigation-submenu-li"><a href="#">Щербеты</a></li>
                     <li class="main-navigation-submenu-li"><a href="#">Фруктовый лед</a></li>
                     <li class="main-navigation-submenu-li submenu-last-item"><a href="#">Мелорин</a></li>
@@ -108,21 +108,25 @@
                 <img class="hit-img" src="img/icecream-cream-orange.png" width="270" height="270" alt="Сливочно-апельсиновое мороженое    ">
                 <div class="hit-price">310₽<span class="weight">/кг</span></div>
                 <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a></p>
+                <a class="btn-main btn-fast-view" href="#">Быстрый просмотр</a>
               </div>
               <div class="hit-item">
                 <img class="hit-img" src="img/icecream-chokolate.png" width="270" height="270" alt="Сливочно-кофейное мороженое">
                 <div class="hit-price">380₽<span class="weight">/кг</span></div>
                 <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a></p>
+                <a class="btn-main btn-fast-view" href="#">Быстрый просмотр</a>
               </div>
               <div class="hit-item">
                 <img class="hit-img" src="img/icecream-cream-strawberry.png" width="270" height="270" alt="Сливочно-клубничное мороженое">
                 <div class="hit-price">355₽<span class="weight">/кг</span></div>
                 <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочно-клубничное с присыпкой из белого  шоколада</span></a></p>
+                <a class="btn-main btn-fast-view" href="#">Быстрый просмотр</a>
               </div>
               <div class="hit-item">
                 <img class="hit-img" src="img/icecream-cream-caramel.png" width="270" height="270" alt="Сливочное крем-брюле">
                 <div class="hit-price">415₽<span class="weight">/кг</span></div>
                 <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочное крем-брюле с карамельной подливкой</span></a></p>
+                <a class="btn-main btn-fast-view" href="#">Быстрый просмотр</a>
               </div>
             </section>
             <section class="advertise clearfix">
@@ -152,18 +156,18 @@
             </section>
            </div>
         </main>
-        <div class="map">
+        <div class="map-block" id="map">
           <div class="container clearfix">
-          <section class="contacts">
-            <span class="contacts-lightfont">Адрес главного офиса и<br>
-            офлайн магазина:</span><br>
-            <span class="contacts-boldfont">ул. Большая Конюшенная<br>
-            19/8, Санкт-Петербург</span><br>
-            <span class="contacts-lightfont">Для заказов по телефону:</span><br>
-            <span class="contacts-boldfont">8 812 450-25-25</span><br>
-            <span class="contacts-lightfont">(с 10 до 20 ежедневно)</span><br>
-            <a class="btn-main btn-feedback" href="#">Форма обратной связи</a>
-          </section>
+            <section class="contacts">
+              <span class="address lightfont">Адрес главного офиса и<br>
+              офлайн магазина:</span><br>
+              <span class="street boldfont">ул. Большая Конюшенная<br>
+              19/8, Санкт-Петербург</span><br>
+              <span class="phone lightfont">Для заказов по телефону:</span><br>
+              <span class="cellnumber boldfont">8 812 450-25-25</span><br>
+              <span class="time lightfont">(с 10 до 20 ежедневно)</span><br>
+              <a class="btn-main btn-feedback" href="#">Форма обратной связи</a>
+            </section>
           </div>
         </div>
         <footer class="main-footer">
@@ -175,16 +179,20 @@
               <a class="social-btn social-btn-vk" href="#">VKontakte</a>
             </section>
             <section class="footer-content footer-info">
-              <ul class="footer-info-ul">
-                <li class="footer-info-li"><span class="footer-info-active">Для поставщиков</span></li>
-                <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>О производстве</span></a></li>
-                <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Наши документы</span></a></li>
-                <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Экологические стандарты</span></a></li>
-              </ul>
+              <div class="footer-info-wrapper">
+                <ul class="footer-info-ul ul-left-column">
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a footer-info-active" href="#"><span>Для   поставщиков</span></a></li>
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>О производстве</span></a></li>
+                </ul>
+                <ul class="footer-info-ul ul-right-column">
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Наши документы</span></a></li>
+                  <li class="footer-info-li"><a class="footer-info-ul-li-a" href="#"><span>Экологические стандарты</span></a></li>
+                </ul>
+              </div>
             </section>
             <section class="footer-content footer-copyright">
-              <a class="footer-logo" href="https://htmlacademy.ru"><img src="img/footer-logo.png" width="110" height="40" alt="HTML     Academy"></a>
-              <p>Сделано в HTML Academy © 2016</p>
+              <a class="footer-logo" href="https://htmlacademy.ru"><img src="img/footer-logo.png" width="110" height="40" alt="HTMLAcademy"></a>
+              <p>Сделано в <a class="footer-copyright-a" href="#"><span>HTML Academy</span></a> © 2016</p>
             </section>
           </div>
         </footer>
@@ -194,19 +202,23 @@
       <h2>Мы обязательно вам ответим!</h2>
       <div class="field-wrapper">
         <input class="feedback-author-field" id="author-field-id" type="text" name="feedback-author">
-        <label class="moving-label" for="author-field-id">Как Вас зовут?</label>
+        <label class="moving-label author-label" for="author-field-id">Как Вас зовут?</label>
       </div>
       <div class="field-wrapper">
-        <input class="feedback-email-field" id="email-field-id" type="email" name="feedback-email">
-        <label class="moving-label" for="email-field-id">Ваша почта для ответа?</label>
+        <input class="feedback-email-field" id="feedback-email-field-id" type="email" name="feedback-email">
+        <label class="moving-label email-label" for="feedback-email-field-id">Ваша почта для ответа?</label>
       </div>
       <div class="field-wrapper">
-        <textarea class="feedback-comment" id="feedback-comment-id" name="feedback-content"></textarea>
-        <label class="moving-label" for="feedback-comment-id">Напишите что-нибудь...</label>
+        <textarea class="feedback-comment" id="feedback-comment-id" name="feedback-comment"></textarea>
+        <label class="moving-label comment-label" for="feedback-comment-id">Напишите что-нибудь...</label>
       </div>
+      <span class="feedback-warning">Введите имя и/или почту!</span>
       <button class="btn-main btn-feedback-submit" type="submit" name="feedback-submit">Отправить</button>
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
     </form>
     <div class="modal-overlay"></div>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/map.js"></script>
+  <script src="js/forms.js"></script>
   </body>
 </html>
