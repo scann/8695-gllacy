@@ -28,7 +28,22 @@ feedbackLink.addEventListener("click", function(event) {
           authorName.focus();
         }
 });
-authorName.addEventListener("change", function(event) {
+function add(){
+var movingLabel = document.querySelectorAll(".moving-label");
+var activeInput = document.querySelectorAll(".active-input");
+for (var i=0; i<activeInput.length;i++) { 
+  activeInput[i].addEventListener("change", function(event) {
+    if(activeInput[i]) {
+        event.preventDefault();
+        movingLabel[i].classList.add("label-hide");
+    } else {
+      movingLabel[i].classList.remove("label-hide");
+    }
+    }); 
+  }
+};
+add();
+/*authorName.addEventListener("change", function(event) {
   if (authorName) {
     event.preventDefault();
     authorLabel.classList.add("label-hide");
@@ -51,7 +66,7 @@ authorComment.addEventListener("change", function(event) {
   } else {
      commentLabel.classList.remove("label-hide");
   }
-});
+});*/
 closeFeedbackForm.addEventListener("click", function(event) {
         event.preventDefault();
         feedbackForm.classList.remove("feedback-form-show");
