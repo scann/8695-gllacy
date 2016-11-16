@@ -208,7 +208,8 @@ body > input[type="radio"] {
   padding-top: 22px;
 }
 .search-wrapper,
-.login-wrapper {
+.login-wrapper,
+.cart-wrapper {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -301,7 +302,7 @@ body > input[type="radio"] {
   background-color: #f8f7f4;
   color: #323232;
 }
-.btn-user-menu:hover + .cart-form {
+.cart-wrapper:hover .cart-form {
   display: block;
 }
 .search-form {

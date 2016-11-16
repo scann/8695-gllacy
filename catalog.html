@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -29,46 +29,52 @@
           </ul>
         </nav>
         <div class="user-block">
-          <a class="btn btn-user-menu btn-search" href="#"></a>
-          <form class="search-form" name="search-form" method="post" action="#">
+          <div class="user-btn-wrapper search-wrapper">
+            <a class="btn btn-user-menu btn-search" href="search.html"></a>
+            <form class="search-form" name="search-form" method="post" action="#">
+              <div class="field-wrapper">
+                <input class="search-field active-input" id="search-field-id" type="search" name="site-search" required>
+                <label class="moving-label" for="search-field-id">Что ищем?</label>
+              </div>
+            </form>
+          </div> 
+          <div class="user-btn-wrapper login-wrapper">
+            <a class="btn btn-user-menu btn-login" href="login.html">Вход</a>
+            <form class="login-form" name="login-form" method="post" action="#">
             <div class="field-wrapper">
-              <input class="search-field" id="search-field-id" type="search" name="site-search">
-              <label class="moving-label" for="search-field-id">Что ищем?</label>
-            </div>
-          </form>
-          <a class="btn btn-user-menu btn-login" href="#">Вход</a>
-          <form class="login-form" name="login-form" method="post" action="#">
-            <div class="field-wrapper">
-              <input class="email-field" id="email-field-id" type="email" name="login-email">
+              <input class="email-field active-input" id="email-field-id" type="text" name="login-email" required>
               <label class="moving-label" for="email-field-id">Электронная почта</label>
             </div>
             <div class="field-wrapper">
-              <input class="password-field" id="password-field-id" type="password" name="login-password">
+              <input class="password-field active-input" id="password-field-id" type="password" name= "login-password" required>
               <label class="moving-label" for="password-field-id">Пароль</label>
             </div>
             <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
             <a class="login-a remind-password" href="#"><span>Забыли пароль?</span></a>
             <a class="login-a new-reg" href="#"><span>Новая регистрация</span></a>
           </form>
-          <a class="btn btn-user-menu btn-cart-full" href="cart.html">2 товара</a>
-          <form class="cart-form" name="cart-form" method="post" action="#">
+         </div>
+          <div class="user-btn-wrapper cart-wrapper">  
+            <a class="btn btn-user-menu btn-cart-full" href="cart.html">2 товара</a>
+            <form class="cart-form" name="cart-form" method="post" action="#">
               <div class="cart-item">
                 <button class="modal-item-delete" type="button" title="Удалить">Удалить</button>
-                <img src="img/cart-icecream-orange.png" width="35" height="35" alt="Мороженое с апельсиновым  джемом">
+                <img src="img/cart-icecream-orange.png" width="35" height="35" alt="Мороженое с   апельсиновым  джемом">
                 <span class="cell cart-item-name">Пломбир с апельсиновым джемом</span>
                 <span class="cell cart-item-quantity">1,5 кг х <span class="cart-item-price">200 руб.</span></span>
                 <span class="cell cart-item-sum">300 руб.</span>
               </div>
               <div class="cart-item">
                 <button class="modal-item-delete" type="button" title="Удалить">Удалить</button>
-                <img src="img/cart-icecream-strawberry.png" width="35" height="35" alt="Клубничный пломбир">
+                <img src="img/cart-icecream-strawberry.png" width="35" height="35" alt="Клубничный пломбир" >
                 <span class="cell cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
                 <span class="cell cart-item-quantity">1,5 кг х <span class="cart-item-price">300 руб.</span></span>
                 <span class="cell cart-item-sum">450 руб.</span>
               </div>
               <span class="cart-total">Итого: <span class="cart-sum">750 руб.</span></span>
               <button class="btn-main btn-buy-cart" type="submit">Оформить заказ</button>
-          </form>
+            </form>
+          </div>  
         </div>
       </div>
     </header>
