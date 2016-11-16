@@ -61,7 +61,6 @@ body > input[type="radio"] {
 .main-navigation-submenu,
 .search-form,
 .login-form,
-.feedback-form,
 .cart-form,
 .slide {
   display: none;
@@ -468,7 +467,7 @@ body > input[type="radio"] {
 .feedback-form {
   position: absolute;
   z-index: 25;
-  top: 340px;
+  top: 100px;
   left: 50%;
   width: 430px;
   margin-left: -240px;
@@ -564,10 +563,10 @@ body > input[type="radio"] {
   cursor: pointer;
 }
 .modal-content-close {
-  top: 0;
-  right: 0;
-  width: 22px;
-  height: 22px;
+  top: 15px;
+  right: 15px;
+  width: 18px;
+  height: 18px;
 }
 .modal-item-delete {
   top: 0;
@@ -579,15 +578,15 @@ body > input[type="radio"] {
 .modal-content-close::after {
   content: "";
   position: absolute;
-  top: 20px;
-  left: -12px;
-  width: 22px;
+  top: 8px;
+  right: -2px;
+  width: 21px;
   height: 3px;
   background-color: #515050;
   border-radius: 3px;
 }
 .modal-item-delete::before,
-.modal-item-delete::after{
+.modal-item-delete::after {
   content: "";
   position: absolute;
   top: 17px;
@@ -666,7 +665,7 @@ body > input[type="radio"] {
   border: none;
   border-radius: 20px;
 }
-.modal-overlay {
+.modal-wrapper {
   display: none;
   position: fixed;
   top: 0;
@@ -677,7 +676,7 @@ body > input[type="radio"] {
   background: #cdd3d0;
   background: rgba(0, 0, 0, 0.3);
 }
-.modal-overlay-show {
+.modal-wrapper-show {
   display: block;
 }
 .header-contacts {
@@ -1387,6 +1386,7 @@ main .container:nth-child(2) {
 .map-block {
   position: relative;
   z-index: 1;
+  min-width: 1200px;
   height: 430px;
   background: url(../img/map.png);
 }

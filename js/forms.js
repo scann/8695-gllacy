@@ -3,51 +3,34 @@ var feedbackForm = document.querySelector(".feedback-form");
 
 var closeFeedbackForm = feedbackForm.querySelector(".modal-content-close");
 
-var overlay = document.querySelector(".modal-overlay");
+var overlay = document.querySelector(".modal-wrapper");
 var warning = feedbackForm.querySelector(".feedback-warning");
 
-var storage = localStorage.getItem("authorName");
+var authorName = feedbackForm.querySelector("[name=feedback-author]");
+var authorEmail = feedbackForm.querySelector("[name=feedback-email]");
+var authorComment = feedbackForm.querySelector("[name=feedback-comment]");
+
+var storageName = localStorage.getItem("authorName");
+var storageEmail = localStorage.getItem("authorEmail");
+
 
 feedbackLink.addEventListener("click", function(event) {
       event.preventDefault();
+      overlay.classList.add("modal-wrapper-show");
       feedbackForm.classList.add("feedback-form-show");
-      overlay.classList.add("modal-overlay-show");
-
-      if (storage) {
-          authorName.value = storage;
+      if (storageName) {
+          authorName.value = storageName;
           authorEmail.focus();
-        } else {
-          authorName.focus();
-        }
+        } else if ((storageName)&&(storageEmail)) {
+            authorName.value = storageName;
+            authorEmail.value = storageEmail;
+            authorComment.focus();
+          } else authorName.focus();
 });
-/*authorName.addEventListener("change", function(event) {
-  if (authorName) {
-    event.preventDefault();
-    authorLabel.classList.add("label-hide");
-  } else {
-     authorLabel.classList.remove("label-hide");
-  }
-});
-authorEmail.addEventListener("change", function(event) {
-  if (authorEmail) {
-    event.preventDefault();
-    emailLabel.classList.add("label-hide");
-  } else {
-     emailLabel.classList.remove("label-hide");
-  }
-});
-authorComment.addEventListener("change", function(event) {
-  if (authorComment) {
-    event.preventDefault();
-    commentLabel.classList.add("label-hide");
-  } else {
-     commentLabel.classList.remove("label-hide");
-  }
-});*/
 closeFeedbackForm.addEventListener("click", function(event) {
         event.preventDefault();
         feedbackForm.classList.remove("feedback-form-show");
-        overlay.classList.remove("modal-overlay-show");
+        overlay.classList.remove("modal-wrapper-show");
       });
 feedbackForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -63,8 +46,8 @@ window.addEventListener("keydown", function(event) {
           if (feedbackForm.classList.contains("feedback-form-show")) {
             feedbackForm.classList.remove("feedback-form-show");
           }
-          if (overlay.classList.contains("modal-overlay-show")) {
-            overlay.classList.remove("modal-overlay-show");
+          if (overlay.classList.contains("modal-wrapper-show")) {
+            overlay.classList.remove("modal-wrapper-show");
           }
         }
-      });
+});

@@ -56,7 +56,7 @@
                    <label class="moving-label" for="email-field-id">Электронная почта</label>
                  </div>
                  <div class="field-wrapper">
-                   <input class="password-field active-input" id="password-field-id" type="password"name= "login-password" required>
+                   <input class="password-field active-input" id="password-field-id" type="password" name= "login-password" required>
                    <label class="moving-label" for="password-field-id">Пароль</label>
                  </div>
                  <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
@@ -172,7 +172,7 @@
               <span class="phone lightfont">Для заказов по телефону:</span><br>
               <span class="cellnumber boldfont">8 812 450-25-25</span><br>
               <span class="time lightfont">(с 10 до 20 ежедневно)</span><br>
-              <a class="btn-main btn-feedback" href="feedback.html">Форма обратной связи</a>
+              <a class="btn-main btn-feedback" href="#">Форма обратной связи</a>
             </section>
           </div>
         </div>
@@ -204,25 +204,26 @@
         </footer>
       </div>
     </div>
-    <form class="feedback-form" name="feedback-form" method="post" action="#">
-      <h2>Мы обязательно вам ответим!</h2>
-      <div class="field-wrapper">
-        <input class="feedback-author-field active-input" id="author-field-id" type="text" name="feedback-author" required>
-        <label class="moving-label author-label" for="author-field-id">Как Вас зовут?</label>
-      </div>
-      <div class="field-wrapper">
-        <input class="feedback-email-field active-input" id="feedback-email-field-id" type="text" name="feedback-email" required>
-        <label class="moving-label email-label" for="feedback-email-field-id">Ваша почта для ответа?</label>
-      </div>
-      <div class="field-wrapper">
-        <textarea class="feedback-comment active-input" id="feedback-comment-id" name="feedback-comment" required></textarea>
-        <label class="moving-label comment-label" for="feedback-comment-id">Напишите что-нибудь...</label>
-      </div>
-      <span class="feedback-warning">Введите имя и/или почту!</span>
-      <button class="btn-main btn-feedback-submit" type="submit" name="feedback-submit">Отправить</button>
-      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-    </form>
-    <div class="modal-overlay"></div>
+    <div class="modal-wrapper">
+      <form class="feedback-form" name="feedback-form" method="post" action="#">
+        <h2>Мы обязательно вам ответим!</h2>
+        <div class="field-wrapper">
+          <input class="feedback-author-field active-input" id="author-field-id" type="text" name="feedback-author" required>
+          <label class="moving-label author-label" for="author-field-id">Как Вас зовут?</label>
+        </div>
+        <div class="field-wrapper">
+          <input class="feedback-email-field active-input" id="feedback-email-field-id" type="text" name="feedback-email" required>
+          <label class="moving-label email-label" for="feedback-email-field-id">Ваша почта для ответа?</label>
+        </div>
+        <div class="field-wrapper">
+          <textarea class="feedback-comment active-input" id="feedback-comment-id" name="feedback-comment" required></textarea>
+          <label class="moving-label comment-label" for="feedback-comment-id">Напишите что-нибудь...</label>
+        </div>
+        <span class="feedback-warning">Введите имя и/или почту!</span>
+        <button class="btn-main btn-feedback-submit" type="submit" name="feedback-submit">Отправить</button>
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      </form>
+    </div>
   <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/map.js"></script>
   <script src="js/forms.js"></script>
