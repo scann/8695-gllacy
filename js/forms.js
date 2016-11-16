@@ -6,14 +6,6 @@ var closeFeedbackForm = feedbackForm.querySelector(".modal-content-close");
 var overlay = document.querySelector(".modal-overlay");
 var warning = feedbackForm.querySelector(".feedback-warning");
 
-var authorName = feedbackForm.querySelector("[name=feedback-author]");
-var authorEmail = feedbackForm.querySelector("[name=feedback-email]");
-var authorComment = feedbackForm.querySelector("[name=feedback-comment]");
-
-var authorLabel = feedbackForm.querySelector(".author-label");
-var emailLabel = feedbackForm.querySelector(".email-label");
-var commentLabel = feedbackForm.querySelector(".comment-label");
-
 var storage = localStorage.getItem("authorName");
 
 feedbackLink.addEventListener("click", function(event) {
@@ -28,21 +20,6 @@ feedbackLink.addEventListener("click", function(event) {
           authorName.focus();
         }
 });
-function add(){
-var movingLabel = document.querySelectorAll(".moving-label");
-var activeInput = document.querySelectorAll(".active-input");
-for (var i=0; i<activeInput.length;i++) { 
-  activeInput[i].addEventListener("change", function(event) {
-    if(activeInput[i]) {
-        event.preventDefault();
-        movingLabel[i].classList.add("label-hide");
-    } else {
-      movingLabel[i].classList.remove("label-hide");
-    }
-    }); 
-  }
-};
-add();
 /*authorName.addEventListener("change", function(event) {
   if (authorName) {
     event.preventDefault();
