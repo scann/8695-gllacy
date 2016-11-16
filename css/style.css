@@ -812,7 +812,7 @@ body > input[type="radio"] {
   background: #ffffff;
   color: #323232;
 }
-.sort-field:hover.select-wrapper::after {
+.select-wrapper:hover.select-wrapper::after {
   border-top-color: #323232;
 }
 .range-field {
@@ -863,12 +863,13 @@ body > input[type="radio"] {
   background: #a8bab0;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+  font-size: 0;
 }
 .item-fat-wrapper {
   padding: 8px 15px;
 }
 .item-fill-wrapper {
-  padding: 8px 20px;
+  padding: 6px 20px;
 }
 .item-fat,
 .item-fill {
@@ -877,15 +878,18 @@ body > input[type="radio"] {
 .label-fat {
   position: relative;
   padding-left: 26px;
+  line-height: 1.125em;
+  font-size: 16px;
+  cursor: pointer;
 }
 .label-fat:not(:last-child) {
-  padding-right: 20px;
+  padding-right: 24px;
 }
 .label-fat::before {
   content: "";
   position: absolute;
-  top: -9%;
-  left: -4%;
+  top: 0;
+  left: 0;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -898,21 +902,12 @@ body > input[type="radio"] {
 .item-fat:checked + .label-fat::after {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 5px;
+  left: 5px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #fff;
-}
-.item-fat:checked + label[for="item-fat-0"]::after {
-  left: 3px;
-}
-.item-fat:checked + label[for="item-fat-before30"]::after {
-  left: 2px;
-}
-.item-fat:checked + label[for="item-fat-before10"]::after,
-.item-fat:checked + label[for="item-fat-above30"]::after {
-  left: 1px;
 }
 .item-fat:disabled + .label-fat::before,
 .item-fill:disabled + .label-fill::before {
@@ -930,15 +925,17 @@ body > input[type="radio"] {
 .label-fill {
   position: relative;
   padding-left: 30px;
+  font-size: 16px;
+  cursor: pointer;
 }
 .label-fill:not(:last-child) {
-  padding-right: 20px;
+  padding-right: 24px;
 }
 .label-fill::before {
   content: "";
   position: absolute;
-  top: -9%;
-  left: -4%;
+  top: 0;
+  left: 0;
   width: 19px;
   height: 19px;
   border-radius: 3px;
@@ -947,24 +944,12 @@ body > input[type="radio"] {
 .item-fill:checked + .label-fill::after {
   content: "";
   position: absolute;
-  top: -1px;
-  width: 20px;
-  height: 20px;
+  top: 0;
+  left: 0;
+  width: 19px;
+  height: 19px;
   background-image: url("../img/spritesheet.png");
   background-position: -156px -64px;
-}
-.item-fill:checked + label[for="item-chokolate"]:after {
-  left: -6px;
-}
-.item-fill:checked + label[for="item-sugar"]:after {
-  left: -8px;
-}
-.item-fill:checked + label[for="item-fruits"]:after,
-.item-fill:checked + label[for="item-syrops"]:after {
-  left: -4px;
-}
-.item-fill:checked + label[for="item-jams"]:after {
-  left: -3px;
 }
 .btn-apply-filter {
   display: inline-block;
@@ -1445,7 +1430,6 @@ main .container:nth-child(2) {
 .pagination {
   outline: 1px solid black;
   float: right;
-  width: 190px;
   margin-bottom: 32px;
 }
 .pagination-arrow {
