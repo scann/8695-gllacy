@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <input type="radio" id="slider-btn-1" name="toggle" checked>
@@ -41,28 +41,32 @@
             <div class="user-block">
               <div class="user-btn-wrapper search-wrapper">
                <a class="btn btn-user-menu btn-search" href="search.html"></a>
-               <form class="search-form" name="search-form" method="post" action="#">
-                 <div class="field-wrapper">
-                   <input class="search-field active-input" id="search-field-id" type="search" name="site-search" required>
-                   <label class="moving-label" for="search-field-id">Что ищем?</label>
-                 </div>
-               </form>
-              </div> 
+               <div class="search-form-wrapper">
+                <form class="search-form" name="search-form" method="post" action="#">
+                  <div class="field-wrapper">
+                    <input class="search-field active-input" id="search-field-id" type="search" name="site-search" required>
+                    <label class="moving-label" for="search-field-id">Что ищем?</label>
+                  </div>
+                </form>
+              </div>
+              </div>
               <div class="user-btn-wrapper login-wrapper">
                <a class="btn btn-user-menu btn-login" href="login.html">Вход</a>
-               <form class="login-form" name="login-form" method="post" action="#">
-                 <div class="field-wrapper">
-                   <input class="email-field active-input" id="email-field-id" type="text" name="login-email" required>
-                   <label class="moving-label" for="email-field-id">Электронная почта</label>
-                 </div>
-                 <div class="field-wrapper">
-                   <input class="password-field active-input" id="password-field-id" type="password" name= "login-password" required>
-                   <label class="moving-label" for="password-field-id">Пароль</label>
-                 </div>
-                 <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
-                 <a class="login-a remind-password" href="#"><span>Забыли пароль?</span></a>
-                 <a class="login-a new-reg" href="#"><span>Новая регистрация</span></a>
-               </form>
+               <div class="form-wrapper">
+                <form class="login-form" name="login-form" method="post" action="#">
+                  <div class="field-wrapper">
+                    <input class="email-field active-input" id="email-field-id" type="text" name="login-email" required>
+                    <label class="moving-label" for="email-field-id">Электронная почта</label>
+                  </div>
+                  <div class="field-wrapper">
+                    <input class="password-field active-input" id="password-field-id" type="password" name= "login-password" required>
+                    <label class="moving-label" for="password-field-id">Пароль</label>
+                  </div>
+                  <button class="btn-main btn-enter" type="submit" name="login-submit">Войти</button>
+                  <a class="login-a remind-password" href="#"><span>Забыли пароль?</span></a>
+                  <a class="login-a new-reg" href="#"><span>Новая регистрация</span></a>
+                </form>
+               </div>
               </div>
               <a class="btn btn-user-menu btn-cart-empty" href="#">Пусто</a>
              </div>
@@ -115,8 +119,8 @@
                   <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочное с  апельсиновым джемом и цитрусовой стружкой</span></a></p>
                   <a class="btn-main btn-fast-view" href="#">Быстрый просмотр</a>
                 </div>
-              </div> 
-              <div class="hit-item-wrapper"> 
+              </div>
+              <div class="hit-item-wrapper">
                 <div class="hit-item">
                   <img class="hit-img" src="img/icecream-chokolate.png" width="267" height="267" alt="  Сливочно-кофейное мороженое">
                   <div class="hit-price">380₽<span class="weight">/кг</span></div>
@@ -132,14 +136,14 @@
                   <a class="btn-main btn-fast-view" href="#">Быстрый просмотр</a>
                 </div>
               </div>
-              <div class="hit-item-wrapper">  
+              <div class="hit-item-wrapper">
                 <div class="hit-item">
                   <img class="hit-img" src="img/icecream-cream-caramel.png" width="267" height="267" alt="Сливочное крем-брюле">
                   <div class="hit-price">415₽<span class="weight">/кг</span></div>
                   <p class="hit-description"><a class="hit-description-a" href="#"><span>Сливочное крем-брюле с карамельной подливкой</span>  </a></p>
                   <a class="btn-main btn-fast-view" href="#">Быстрый просмотр</a>
                 </div>
-              </div>  
+              </div>
             </section>
             <section class="advertise clearfix">
               <h2 class="advertise-title">Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес </h2>
@@ -163,7 +167,7 @@
                   <div class="mail-field-wrapper">
                     <input class="email-list-field active-input" id="email-list-field-id" type="text" required>
                     <label class="moving-label" for="email-list-field-id">Электронная почта</label>
-                  </div>  
+                  </div>
                   <button class="btn-main btn-mail-subscribe" type="submit">Отправить</button>
                 </form>
               </div>
@@ -227,7 +231,6 @@
           <textarea class="feedback-comment active-input" id="feedback-comment-id" name="feedback-comment" required></textarea>
           <label class="moving-label comment-label" for="feedback-comment-id">Напишите что-нибудь...</label>
         </div>
-        <span class="feedback-warning">Введите имя и/или почту!</span>
         <button class="btn-main btn-feedback-submit" type="submit" name="feedback-submit">Отправить</button>
         <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
       </form>

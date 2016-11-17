@@ -5,54 +5,66 @@ var cartLink = document.querySelector(".btn-cart-full");
 var feedbackLink = document.querySelector(".btn-feedback");
 var feedbackForm = document.querySelector(".feedback-form");
 
-var closeFeedbackForm = feedbackForm.querySelector(".modal-content-close");
+var closeFeedbackForm = document.querySelector(".modal-content-close");
 
 var overlay = document.querySelector(".modal-wrapper");
-var warning = feedbackForm.querySelector(".feedback-warning");
 
-var authorName = feedbackForm.querySelector("[name=feedback-author]");
-var authorEmail = feedbackForm.querySelector("[name=feedback-email]");
-var authorComment = feedbackForm.querySelector("[name=feedback-comment]");
+var map = document.querySelector(".map-block");
+
+var authorName = document.querySelector("[name=feedback-author]");
+var authorEmail = document.querySelector("[name=feedback-email]");
+var authorComment = document.querySelector("[name=feedback-comment]");
 
 var storageName = localStorage.getItem("authorName");
 var storageEmail = localStorage.getItem("authorEmail");
 
-searchLink.addEventListener("click", function(event) {
+if (searchLink) {
+  searchLink.addEventListener("click", function(event) {
   event.preventDefault();
-});
-menuLink.addEventListener("click", function(event) {
+  });
+}
+if (menuLink) {
+  menuLink.addEventListener("click", function(event) {
   event.preventDefault();
-});
-cartLink.addEventListener("click", function(event) {
+  });
+}
+if (cartLink) {
+  cartLink.addEventListener("click", function(event) {
   event.preventDefault();
-});
-feedbackLink.addEventListener("click", function(event) {
+  });
+}
+if (feedbackLink) {
+  feedbackLink.addEventListener("click", function(event) {
       event.preventDefault();
       overlay.classList.add("modal-wrapper-show");
       feedbackForm.classList.add("feedback-form-show");
-      if (storageName) {
+      authorComment.value = "";
+      if (storageName&&storageEmail) {
           authorName.value = storageName;
-          authorEmail.focus();
-        } else if ((storageName)&&(storageEmail)) {
+          authorEmail.value = storageEmail;
+          authorComment.focus();
+        } else if (storageName) {
             authorName.value = storageName;
-            authorEmail.value = storageEmail;
-            authorComment.focus();
+            authorEmail.focus();
           } else authorName.focus();
-});
-closeFeedbackForm.addEventListener("click", function(event) {
+  });
+}
+if (closeFeedbackForm) {
+  closeFeedbackForm.addEventListener("click", function(event) {
         event.preventDefault();
         feedbackForm.classList.remove("feedback-form-show");
         overlay.classList.remove("modal-wrapper-show");
       });
-feedbackForm.addEventListener("submit", function(event) {
+}
+if (feedbackForm) {
+  feedbackForm.addEventListener("submit", function(event) {
         event.preventDefault();
-        if (!authorName.value || !authorEmail.value) {
-          event.preventDefault();
-          warning.classList.add("feedback-warning-show");
-        } else {
-          localStorage.setItem("authorName", authorName.value);
-        }
-});
+        localStorage.setItem("authorName", authorName.value);
+        localStorage.setItem("authorEmail", authorEmail.value);
+        feedbackForm.classList.remove("feedback-form-show");
+        overlay.classList.remove("modal-wrapper-show");
+  });
+}
 window.addEventListener("keydown", function(event) {
         if (event.keyCode === 27) {
           if (feedbackForm.classList.contains("feedback-form-show")) {
@@ -63,6 +75,7 @@ window.addEventListener("keydown", function(event) {
           }
         }
 });
+if (map) {
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [59.9384,30.3300],
@@ -82,4 +95,5 @@ ymaps.ready(function () {
         });
 
     myMap.geoObjects.add(myPlacemark);
-});
+  });
+}
