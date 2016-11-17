@@ -1176,12 +1176,12 @@ main .container:nth-child(2) {
   padding-right: 13px;
   padding-left: 13px;
 }
-.hit-item-wrapper:nth-child(4n+1) .hit-item {
+/* .hit-item-wrapper:nth-child(4n+1) .hit-item {
   padding-left: 0;
 } 
 .hit-item-wrapper:nth-child(4n) .hit-item {
   padding-right: 0;
-} 
+}  */
 .hit-price,
 .good-price {
   position: absolute;

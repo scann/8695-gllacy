@@ -1,3 +1,7 @@
+var searchLink = document.querySelector(".btn-search");
+var menuLink = document.querySelector(".btn-login");
+var cartLink = document.querySelector(".btn-cart-full");
+
 var feedbackLink = document.querySelector(".btn-feedback");
 var feedbackForm = document.querySelector(".feedback-form");
 
@@ -13,7 +17,15 @@ var authorComment = feedbackForm.querySelector("[name=feedback-comment]");
 var storageName = localStorage.getItem("authorName");
 var storageEmail = localStorage.getItem("authorEmail");
 
-
+searchLink.addEventListener("click", function(event) {
+  event.preventDefault();
+});
+menuLink.addEventListener("click", function(event) {
+  event.preventDefault();
+});
+cartLink.addEventListener("click", function(event) {
+  event.preventDefault();
+});
 feedbackLink.addEventListener("click", function(event) {
       event.preventDefault();
       overlay.classList.add("modal-wrapper-show");
@@ -50,4 +62,24 @@ window.addEventListener("keydown", function(event) {
             overlay.classList.remove("modal-wrapper-show");
           }
         }
+});
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.9384,30.3300],
+            zoom: 16,
+            controls: ['smallMapDefaultSet']
+        },
+        {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark([59.9386,30.3231], {
+            hintContent: 'HTMLAcademy'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/marker.png',
+            iconImageSize: [218, 142],
+            iconImageOffset: [-10, -52]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
 });
