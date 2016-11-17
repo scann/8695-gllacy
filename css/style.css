@@ -1111,12 +1111,12 @@ main .container:nth-child(2) {
   text-align: center;
   border-radius: 26px;
 }
-.hits {
+.hits,
+.goods {
   font-size: 0;
 }
 .goods {
   margin-bottom: 50px;
-  font-size: 0;
 }
 .hit-item::before {
   content: "";
@@ -1142,24 +1142,31 @@ main .container:nth-child(2) {
 }
 .hit-item:hover,
 .good-item:hover {
+  z-index: 2;
   margin-bottom: -65px;
   border-radius: 6px;
   background: #aebeb4;
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 20px 20px #d0d5d2;
   box-shadow: 0 20px 20px rgba(0,0,0,0.4);
-  z-index: 2;
-  border-radius: 5px;
 }
 .good-item:hover .btn-fast-view,
 .hit-item:hover .btn-fast-view {
   display: inline-block;
 }
-.goods:nth-child(n+4) {
+/* .goods:nth-child(n+4) {
   margin-left: -12px;
+}*/
+.hit-item-wrapper {
+  display: inline-block;
+  width: 267px;
 }
-.hits:nth-child(n+4) {
-  margin-left: -9.5px;
+.hit-item-wrapper:not(:nth-child(4n)) {
+  margin-right: 26px;
+  margin-left: 0;
+} 
+.hit-item-wrapper:nth-child(4n) {
+  margin-right: 0;
 }
 .hit-item,
 .good-item {
@@ -1167,22 +1174,27 @@ main .container:nth-child(2) {
   padding-top: 6px;
 }
 .good-item {
-  padding-right: 12px;
-  padding-left: 12px;
-}
+  padding-right: 13px;
+  padding-left: 13px;
+} 
 .hit-item {
-  padding-right: 9px;
-  padding-left: 9px;
+  padding-right: 13px;
+  padding-left: 13px;
 }
-
-.hit-item:nth-child(4n),
-.good-item:nth-child(4n) {
+.hit-item:nth-child(4n+1) {
+  padding-left: 0;
+} 
+.hit-item:nth-child(4n) {
+  padding-right: 0;
+} 
+ /* .hit-item:nth-child(4n),
+ .good-item:nth-child(4n) {
   margin-right: -12px;
-}
-.hit-item:nth-child(3) .hit-description,
+ }  */
+/* .hit-item:nth-child(3) .hit-description,
 .good-item:nth-child(3) .good-description {
   padding-left: 2px;
-}
+} */
 .hit-price,
 .good-price {
   position: absolute;
@@ -1513,7 +1525,7 @@ main .container:nth-child(2) {
 }
 .social-btn:active.social-btn::before {
   border-radius: 50%;
-  box-shadow: 0 1px 0 1px #888888;
+  box-shadow: 0 0 0 1px #888888;
 }
 .social-btn-tw:before {
   width: 33px;
